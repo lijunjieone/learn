@@ -38,3 +38,12 @@ set_tests_properties (test_usage PROPERTIES PASS_REGULAR_EXPRESSION "Usage: .* b
 add_test (test_2_4 demo 2 4)
 set_tests_properties (test_2_4 PROPERTIES PASS_REGULAR_EXPRESSION "is 16")
 
+macro (do_test arg1 arg2 result)
+  add_test (test_${arg1}_${arg2} demo ${arg1} ${arg2})
+  set_tests_properties (test_${arg1}_${arg2} PROPERTIES PASS_REGULAR_EXPRESSION ${result})
+
+endmacro (do_test)
+
+do_test (5 2 "is 25")
+do_test (2 4 "is 16")
+
