@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "MathFunctions.h"
+#include "math/MathFunctions.h"
 
 
 

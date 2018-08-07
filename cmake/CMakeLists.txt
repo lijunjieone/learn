@@ -4,5 +4,9 @@ project (demo1)
 
 aux_source_directory(. DIR_SRCS)
 
+add_subdirectory(math)
+
 
 add_executable(demo ${DIR_SRCS} )
+
+target_link_libraries(demo MathFunctions)
