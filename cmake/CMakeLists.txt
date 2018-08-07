@@ -1,6 +1,14 @@
 cmake_minimum_required (VERSION 2.8)
 
+set(CMAKE_BUILD_TYPE "Debug")
+set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -WALL -g -ggdb")
+set(CMAEK_CXX_FLAGS_RELEASE  "$ENV{CXXFLAGS} -O3 -WALL")
+
 project (demo4)
+
+
+include (${CMAKE_ROOT}/Modules/CheckFunctionExists.cmake)
+check_function_exists (pow HAVE_POW)
 
 configure_file (
   "${PROJECT_SOURCE_DIR}/config.h.in"
@@ -10,11 +18,11 @@ configure_file (
 
 option (USE_MYMATH "Use provided math implementation" ON)
 
-if (USE_MYMATH)
+if (NOT HAVE_POW)
    include_directories("${PROJECT_SOURCE_DIR}/math")
    add_subdirectory(math)
    set (EXTRA_LIBS ${EXTRA_LIBS} MathFunctions)
-endif (USE_MYMATH)
+endif (NOT HAVE_POW)
 
 aux_source_directory(. DIR_SRCS)
 
