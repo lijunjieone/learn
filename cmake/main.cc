@@ -24,7 +24,6 @@ int main(int argc,char *argv[]) {
     int exponent = atoi(argv[2]);
 
 #ifdef USE_MYMATH
-  
     printf("Now we use our own Math library.\n");
     double result = power(base,exponent);
 #else
