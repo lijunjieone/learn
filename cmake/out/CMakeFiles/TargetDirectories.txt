@@ -1,0 +1,3 @@
+/Users/lijunjie/tmp/learn/cmake/out/CMakeFiles/rebuild_cache.dir
+/Users/lijunjie/tmp/learn/cmake/out/CMakeFiles/edit_cache.dir
+/Users/lijunjie/tmp/learn/cmake/out/CMakeFiles/demo.dir
