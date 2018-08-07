@@ -1,1 +1,1 @@
-/* #undef USE_MYMATH */
+/**#define USE_MYMATH*/
