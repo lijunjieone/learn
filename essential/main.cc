@@ -23,6 +23,8 @@ void test_point1();
 void test_bubble() ;
 void test_io();
 inline void test_inline() ;
+void test_template() ;
+
 int main() {
     // test_cout(); 
     // test_array1();
@@ -30,7 +32,8 @@ int main() {
     // test_io();
     //test_fibon();
     // test_bubble();
-    test_inline();
+    // test_inline();
+    test_template();
     return 0;
    
 }
