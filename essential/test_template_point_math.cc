@@ -27,6 +27,20 @@ const elem * find2(const vector<elem> &vec,const elem &value) {
     return 0;
 }
 
+template <typename elem>
+const elem * find3( const elem *array,int size,const elem &value) {
+    if(!array || size < 1) {
+        return 0;
+    }
+    for(int i=0;i<size;i++) {
+        if(value == array[i]) {
+            return &array[i];
+        }
+    }
+
+    return 0;
+}
+
 void test_find1() {
     int array[] = {1,2,3,4,5,8,10,200,3};
     vector<int> vec(array,array+9);
@@ -62,9 +76,17 @@ void test_find2_string() {
 }
 
 
+void test_find3_float() {
+    float array[] = {1.0f,2.0f,3.3f,4.6f,5.7f,8.9f,10.0f,200.3f,3};
+    vector<float> vec(array,array+9);
+    cout<<"find value:"<<find3(array,9,4.6f)<<endl;
+    cout<<"find value:"<<find3(&vec[0],9,4.6f)<<endl;
+}
+
 void test_point_math() {
     test_find2_int();
     test_find2_float();
     test_find2_string();
+    test_find3_float();
     // test_find1();
 }
