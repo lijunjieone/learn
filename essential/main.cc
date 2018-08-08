@@ -18,8 +18,12 @@ int test() {
 
 bool fibon_elem(int,int&);
 void test_cout();
+void test_array1() ;
+void test_point1();
 int main() {
-    test_cout(); 
+    // test_cout(); 
+    // test_array1();
+    test_point1();
     return 0;
    
 }
