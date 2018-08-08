@@ -7,6 +7,7 @@ void test_io();
 void test_template() ;
 void test_func_point_fibon() ;
 
+void test_point_math() ;
 
 
 inline void test_inline() ;

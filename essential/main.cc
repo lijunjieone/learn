@@ -26,9 +26,11 @@ int main() {
     // test_io();
     //test_fibon();
     // test_bubble();
-    test_inline();
+    // test_inline();
     // test_template();
     // test_func_point_fibon();
+    test_point_math() ;
+
     return 0;
    
 }
