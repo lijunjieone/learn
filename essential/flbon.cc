@@ -1,3 +1,7 @@
+#include <vector>
+#include <iostream>
+
+using namespace std;
 
 bool fibon_elem(int pos,int &elem) {
     if(pos <= 0 || pos > 1024) {
@@ -15,27 +19,9 @@ bool fibon_elem(int pos,int &elem) {
     return true;
 }
 
-// void display(vector<int> vec) {
-//     for(int i=0;i<vec.size(),++i) {
-//         cout << vec[i] <<' ';
-//     }
-//     cout << endl;
-// }
-
-void swap( int val1,int val2) {
-    int temp = val1;
-    val1 = val2;
-    val2 = temp;
-}
-
-// void bubble_sort(vector<int> vec) {
-//     for(int i=0;i<vec.size();++i) {
-//         for(int j=i+1;j<vec.size(); ++j) {
-//             swap(vec[i],vec[j]);
-//         }
-//     }
-// }
-
-void test_bubble_sort() {
-
+void test_fibon() {
+    int m = 525;
+    int result = 0;
+    fibon_elem(m,result);
+    cout<<"pos:"<<m<<",result:"<<result<<endl;
 }
