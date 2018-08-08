@@ -11,6 +11,14 @@ void display(vector<int> vec) {
     cout<<endl;
 }
 
+void display2(vector<int> vec,ostream &os = cout) {
+    for(int i=0;i<vec.size();i++) {
+        cout << vec[i] << ';';
+    }
+
+    cout << endl;
+
+}
 
 void swap (int &val1,int  &val2) {
     int temp = val1;
