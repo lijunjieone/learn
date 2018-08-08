@@ -1,7 +1,5 @@
 #include <iostream>
-
 using namespace std;
-
 bool is_a(int x) {
     return x;
 }

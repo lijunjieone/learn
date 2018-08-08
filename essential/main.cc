@@ -2,6 +2,8 @@
 #include <iostream>
 #include <string>
 
+#include "test_include.h"
+
 using namespace std;
 
 int test() {
@@ -16,14 +18,6 @@ int test() {
 
 }
 
-void test_fibon();
-void test_cout();
-void test_array1() ;
-void test_point1();
-void test_bubble() ;
-void test_io();
-inline void test_inline() ;
-void test_template() ;
 
 int main() {
     // test_cout(); 
@@ -32,8 +26,9 @@ int main() {
     // test_io();
     //test_fibon();
     // test_bubble();
-    // test_inline();
-    test_template();
+    test_inline();
+    // test_template();
+    // test_func_point_fibon();
     return 0;
    
 }
