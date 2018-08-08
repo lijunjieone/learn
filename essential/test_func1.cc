@@ -36,6 +36,7 @@ void bubble_sort(vector<int> &vec) {
 }
 void test_fibon_seq() ;
 
+void test_default_param(int val1,int val2=20);
 
 void test_bubble() {
     int x[]={1,4,20,3,4,5,8,10,31,40,2,7};
@@ -45,6 +46,9 @@ void test_bubble() {
     display(c);
 
     test_fibon_seq();
+
+    test_default_param(11,30);
+    test_default_param(12);
 }
 
 
@@ -80,4 +84,9 @@ void test_fibon_seq() {
     vector<int> vec(s);
     // display(fibon_seq2(vec,s));
     display(*fibon_seq(s));
+}
+
+
+void test_default_param(int val1,int val2) {
+    cout<<"val1:"<<val1<<",val2:"<<val2<<endl;
 }
