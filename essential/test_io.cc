@@ -9,4 +9,9 @@ void test_cout() {
     std::cin>>val;
     std::cout << "this is your input " << val << std::endl;
 
+    const int line_size = 8;
+    for (int i=0;i<line_size;i++) {
+        std::cout<<"for and const learn:"<<i<<std::endl;
+
+    }
 }
