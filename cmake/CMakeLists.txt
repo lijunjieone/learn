@@ -1,8 +1,11 @@
 cmake_minimum_required (VERSION 2.8)
 
+set (Demo_VERSION_MAJOR 1)
+set (Demo_VERSION_MINOR 0)
+
 set(CMAKE_BUILD_TYPE "Debug")
-set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -WALL -g -ggdb")
-set(CMAEK_CXX_FLAGS_RELEASE  "$ENV{CXXFLAGS} -O3 -WALL")
+set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb")
+set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
 
 project (demo4)
 
@@ -34,6 +37,15 @@ target_link_libraries(demo ${EXTRA_LIBS})
 
 install (TARGETS demo DESTINATION bin)
 install (FILES "${PROJECT_SOURCE_DIR}/config.h" DESTINATION include)
+
+
+
+include (InstallRequiredSystemLibraries)
+set (CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/License.txt")
+set (CPACK_PACKAGE_VERSION_MAJOR "${Demo_VERSION_MAJOR}")
+set (CPACK_PACKAGE_VERSION_MINOR "${Demo_VERSION_MINOR}")
+
+include (CPack)
 
 
 enable_testing()
