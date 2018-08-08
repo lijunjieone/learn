@@ -20,10 +20,12 @@ bool fibon_elem(int,int&);
 void test_cout();
 void test_array1() ;
 void test_point1();
+void test_io();
 int main() {
     // test_cout(); 
     // test_array1();
-    test_point1();
+    // test_point1();
+    test_io();
     return 0;
    
 }
