@@ -13,6 +13,8 @@
         "iosfwd": "cpp",
         "__bit_reference": "cpp",
         "__string": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "list": "cpp",
+        "iostream": "cpp"
     }
 }

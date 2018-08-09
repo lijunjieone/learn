@@ -17,7 +17,7 @@ int test() {
     return 0;
 
 }
-
+void test_algo1() ;
 
 int main() {
     // test_cout(); 
@@ -29,7 +29,8 @@ int main() {
     // test_inline();
     // test_template();
     // test_func_point_fibon();
-    test_point_math() ;
+    // test_point_math() ;
+    test_algo1();
 
     return 0;
    
