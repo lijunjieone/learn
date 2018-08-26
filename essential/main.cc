@@ -119,9 +119,11 @@ void test_typedef1() {
 
 void test_class2();
 void test_xx();
+int  test_openssl1();
 int main() {
-    test_class2();
-    test_xx();
+    test_openssl1();
+    // test_class2();
+    // test_xx();
     // test_link1();
     // test_typedef1();
     // test_size_t();
