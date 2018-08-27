@@ -1,5 +1,5 @@
 //
-//  NSString+Number2.h
+//  CategoryThing.h
 //  FirstApp2
 //
 //  Created by lijunjie on 27/08/2018.
@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (Number2)
-- (NSNumber *) lengthAsNumber;
+@interface CategoryThing : NSObject
+{
+    NSInteger thing1;
+    NSInteger thing2;
+}
+
+- (NSString *) description;
+
 @end

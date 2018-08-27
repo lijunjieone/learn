@@ -10,6 +10,10 @@
 		C46604F4212E878E00ADD80B /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = C46604F3212E878E00ADD80B /* test.m */; };
 		C46604F7212E896600ADD80B /* Tire.m in Sources */ = {isa = PBXBuildFile; fileRef = C46604F6212E896600ADD80B /* Tire.m */; };
 		C46604FA212E92A000ADD80B /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = C46604F9212E92A000ADD80B /* Car.m */; };
+		C4E038C72133942200E4D47F /* NSString+Number2.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E038C62133942200E4D47F /* NSString+Number2.m */; };
+		C4E038CA21339ADB00E4D47F /* CategoryThing.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E038C921339ADB00E4D47F /* CategoryThing.m */; };
+		C4E038CD21339B2900E4D47F /* CategoryThing+Thing1.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E038CC21339B2900E4D47F /* CategoryThing+Thing1.m */; };
+		C4E038D021339BF100E4D47F /* CategoryThing+Thing2.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E038CF21339BF100E4D47F /* CategoryThing+Thing2.m */; };
 		C4F0319F212D664000BCFBE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F0319E212D664000BCFBE2 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +36,14 @@
 		C46604F6212E896600ADD80B /* Tire.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tire.m; sourceTree = "<group>"; };
 		C46604F8212E928E00ADD80B /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		C46604F9212E92A000ADD80B /* Car.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		C4E038C52133942200E4D47F /* NSString+Number2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Number2.h"; sourceTree = "<group>"; };
+		C4E038C62133942200E4D47F /* NSString+Number2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Number2.m"; sourceTree = "<group>"; };
+		C4E038C821339ADB00E4D47F /* CategoryThing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryThing.h; sourceTree = "<group>"; };
+		C4E038C921339ADB00E4D47F /* CategoryThing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryThing.m; sourceTree = "<group>"; };
+		C4E038CB21339B2900E4D47F /* CategoryThing+Thing1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CategoryThing+Thing1.h"; sourceTree = "<group>"; };
+		C4E038CC21339B2900E4D47F /* CategoryThing+Thing1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CategoryThing+Thing1.m"; sourceTree = "<group>"; };
+		C4E038CE21339BF100E4D47F /* CategoryThing+Thing2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CategoryThing+Thing2.h"; sourceTree = "<group>"; };
+		C4E038CF21339BF100E4D47F /* CategoryThing+Thing2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CategoryThing+Thing2.m"; sourceTree = "<group>"; };
 		C4F0319B212D663F00BCFBE2 /* FirstApp2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FirstApp2; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F0319E212D664000BCFBE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,12 +79,20 @@
 			isa = PBXGroup;
 			children = (
 				C4F0319E212D664000BCFBE2 /* main.m */,
+				C4E038C821339ADB00E4D47F /* CategoryThing.h */,
+				C4E038C921339ADB00E4D47F /* CategoryThing.m */,
+				C4E038CB21339B2900E4D47F /* CategoryThing+Thing1.h */,
+				C4E038CC21339B2900E4D47F /* CategoryThing+Thing1.m */,
+				C4E038CE21339BF100E4D47F /* CategoryThing+Thing2.h */,
+				C4E038CF21339BF100E4D47F /* CategoryThing+Thing2.m */,
 				C46604F2212E877900ADD80B /* test.h */,
 				C46604F3212E878E00ADD80B /* test.m */,
 				C46604F5212E894300ADD80B /* Tire.h */,
 				C46604F6212E896600ADD80B /* Tire.m */,
 				C46604F8212E928E00ADD80B /* Car.h */,
 				C46604F9212E92A000ADD80B /* Car.m */,
+				C4E038C52133942200E4D47F /* NSString+Number2.h */,
+				C4E038C62133942200E4D47F /* NSString+Number2.m */,
 			);
 			path = FirstApp2;
 			sourceTree = "<group>";
@@ -134,8 +154,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4E038D021339BF100E4D47F /* CategoryThing+Thing2.m in Sources */,
+				C4E038CA21339ADB00E4D47F /* CategoryThing.m in Sources */,
+				C4E038C72133942200E4D47F /* NSString+Number2.m in Sources */,
 				C4F0319F212D664000BCFBE2 /* main.m in Sources */,
 				C46604F7212E896600ADD80B /* Tire.m in Sources */,
+				C4E038CD21339B2900E4D47F /* CategoryThing+Thing1.m in Sources */,
 				C46604FA212E92A000ADD80B /* Car.m in Sources */,
 				C46604F4212E878E00ADD80B /* test.m in Sources */,
 			);

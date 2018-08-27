@@ -78,6 +78,14 @@
     return @"I am engne.";
 }
 
+- (id) copyWithZone:(NSZone *)zone
+{
+    Engine *engineCopy;
+    engineCopy = [ [ [ self class ] allocWithZone: zone] init ];
+    return (engineCopy);
+    
+}
+
 @end
 
 

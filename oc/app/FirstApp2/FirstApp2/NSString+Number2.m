@@ -9,5 +9,9 @@
 #import "NSString+Number2.h"
 
 @implementation NSString (Number2)
-
+-(NSNumber * )lengthAsNumber
+{
+    NSUInteger len = [ self length ];
+    return ([NSNumber numberWithUnsignedInt:len]);
+}
 @end

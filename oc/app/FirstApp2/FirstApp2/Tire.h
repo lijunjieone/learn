@@ -11,6 +11,17 @@
 
 # import <Cocoa/Cocoa.h>
 
+@protocol NSCopying
+- (id) copyWithZone: (NSZone *) zone;
+@end
+
+@protocol NSCoding
+-(void) encodeWithCoder: (NSCoder *) encoder;
+-(id) initWithCoder: (NSCoder *) decoder;
+
+@end
+
+
 @interface Tire : NSObject
 {
     float pressure;
@@ -25,7 +36,7 @@
 - (NSString *) description;
 @end
 
-@interface Engine : NSObject
+@interface Engine : NSObject <NSCopying>
 @end
 
 

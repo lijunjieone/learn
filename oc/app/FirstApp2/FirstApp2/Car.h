@@ -12,7 +12,7 @@
 # import <Cocoa/Cocoa.h>
 #import "Tire.h"
 
-@interface Car : NSObject {
+@interface Car : NSObject <NSCopying> {
     NSString *name;
     Engine *engine;
     NSMutableArray *tires;

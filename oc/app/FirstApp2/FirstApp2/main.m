@@ -10,6 +10,11 @@
 #import <Foundation/Foundation.h>
 #import "Tire.h"
 #import "Car.h"
+#import "NSString+Number2.h"
+#import "CategoryThing.h"
+#import "CategoryThing+Thing1.h"
+#import "CategoryThing+Thing2.h"
+
 
 BOOL areIntsdifferent(int thing1,int thing2)
 {
@@ -328,6 +333,68 @@ void test_tire1() {
         [ tire release];
     }
 }
+
+void test_category() {
+    NSString *s=@"this is category";
+    NSLog(@"%@'s length is %d and %d ",s,[s lengthAsNumber],[s length]);
+}
+
+void test_block() {
+    int value = 6;
+    int (^mul_block)(int number) = ^(int number) { return number * number ; };
+    int result = mul_block(value);
+    NSLog(@"result:%d",result);
+    
+}
+
+void test_block2() {
+    NSArray *array = [ NSArray arrayWithObjects:@"lijunjie",@"linian",@"jingyanli",@"mama", nil];
+    
+    NSLog(@"Unsorted Array %@",array);
+    
+    NSArray *sortArray = [array sortedArrayUsingComparator:^(NSString *obj1,NSString *obj2) {
+        return [ obj1 compare: obj2];
+    }];
+    
+    NSLog(@"Sorted Array %@",sortArray);
+}
+
+
+void test_block3() {
+    typedef double (^mul_block_ref)(void);
+    static double a=10,b=20;
+    
+    mul_block_ref mul = ^(void){return a*b ;};
+    
+    NSLog(@"%f * %f = %f ",a,b,mul());
+    
+    a= 30,b=40;
+    NSLog(@"%f * %f = %f ",a,b,mul());
+
+    typedef double (^mul_block_ref2)(double c,double d);
+    
+    mul_block_ref2 mul2 = ^(double c,double d) { return c * d; };
+    NSLog(@"test1=%f,test2=%f",mul2(2,3),mul2(5,2));
+    
+}
+
+void test_block4() {
+    typedef double (^mul_block_ref3)(double c,double d,double e);
+    __block double a;
+    mul_block_ref3 mul4=^(double c,double d,double e) { a= c*d*e; return a;};
+    a=mul4(3.0f,3.0f,1.0f);
+    NSLog(@"%f %f %f %f",3.0f,3.0f,4.0f,a);
+    
+    
+    
+}
+void test_category1() {
+    CategoryThing *thing = [ [CategoryThing alloc] init];
+    [thing setThing1: 12];
+    [thing setThing2: 23];
+    
+    NSLog(@"Thing are %@",thing);
+}
 int main(int argc, const char * argv[]) {
 //    BOOL areTheyDifferent;
 //    areTheyDifferent = areIntsdifferent(5,5);
@@ -339,13 +406,16 @@ int main(int argc, const char * argv[]) {
 //    test_array();
 //    test_file1();
 //    test_class1();
-    test_car();
+//    test_car();
 //    test_array3();
 //    test_map1();
     @autoreleasepool
     {
 //    test_retain();
 //        test_tire1();
+        
+//        test_category1();
+        test_block4();
     }
     
     return 0;
