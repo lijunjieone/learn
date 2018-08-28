@@ -469,6 +469,15 @@ void test_car5() {
     garage.name = @"Lijunjie's Garage";
     Car *car = makeCar(@"Herbie",@"Honda",@"CRT",1984,2,11000);
     [garage addCar:car];
+    car = makeCar(@"Mazida",@"bentian",@"CRF",1982,4,12000);
+    [garage addCar:car];
+    car = makeCar(@"Mazida",@"Ahaha",@"CRT",1984,4,12000);
+    [garage addCar:car];
+    
+    NSPredicate *predicate;
+    predicate = [NSPredicate predicateWithFormat:@"name == 'Mazida'"];
+    BOOL match = [predicate evaluateWithObject:car];
+    NSLog(@"name is Mazida %@",(match) ? "YES":"NO");
     
     [garage print];
 }
