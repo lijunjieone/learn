@@ -395,6 +395,34 @@ void test_category1() {
     
     NSLog(@"Thing are %@",thing);
 }
+
+void test_date1() {
+    NSDate *date = [ NSDate date];
+    NSLog(@"today is %@",date);
+    NSDate *yesterday = [ NSDate dateWithTimeIntervalSinceNow:-(24 * 60 * 60)];
+    NSLog(@"yesterday is %@",yesterday);
+    
+}
+
+void test_data() {
+    const char *str = "Hi there, this is a C string!";
+    NSData *data = [ NSData dataWithBytes: str length: strlen(str)+1];
+    NSLog(@"data is %@",data);
+}
+
+void test_write_file() {
+    NSArray *phrase;
+    phrase = [ NSArray arrayWithObjects:@"I",@"seem",@"to",@"be",@"a",@"verb", nil];
+    [ phrase writeToFile:@"/tmp/a.txt"
+              atomically:YES];
+    
+}
+
+void test_read_file() {
+    NSArray *phrase;
+    phrase = [ NSArray arrayWithContentsOfFile:@"/tmp/a.txt"];
+    NSLog(@"%@",phrase);
+}
 int main(int argc, const char * argv[]) {
 //    BOOL areTheyDifferent;
 //    areTheyDifferent = areIntsdifferent(5,5);
@@ -415,7 +443,10 @@ int main(int argc, const char * argv[]) {
 //        test_tire1();
         
 //        test_category1();
-        test_block4();
+//        test_block4();
+//        test_data();
+//        test_write_file();
+        test_read_file();
     }
     
     return 0;

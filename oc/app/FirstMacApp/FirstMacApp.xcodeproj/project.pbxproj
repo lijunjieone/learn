@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C4457B002133FAD300D0E701 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4457AFF2133FAD300D0E701 /* AppDelegate.m */; };
+		C4457B032133FAD300D0E701 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4457B022133FAD300D0E701 /* ViewController.m */; };
+		C4457B052133FAD300D0E701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4457B042133FAD300D0E701 /* Assets.xcassets */; };
+		C4457B082133FAD300D0E701 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4457B062133FAD300D0E701 /* Main.storyboard */; };
+		C4457B0B2133FAD300D0E701 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4457B0A2133FAD300D0E701 /* main.m */; };
+		C4457B162133FAD300D0E701 /* FirstMacAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4457B152133FAD300D0E701 /* FirstMacAppTests.m */; };
+		C4457B212133FAD300D0E701 /* FirstMacAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4457B202133FAD300D0E701 /* FirstMacAppUITests.m */; };
+		C4457B2F2134070100D0E701 /* main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4457B2E2134070100D0E701 /* main2.storyboard */; };
+		C4457B31213408C600D0E701 /* ios2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4457B30213408C600D0E701 /* ios2.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C4457B122133FAD300D0E701 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4457AF32133FAD200D0E701 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4457AFA2133FAD200D0E701;
+			remoteInfo = FirstMacApp;
+		};
+		C4457B1D2133FAD300D0E701 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4457AF32133FAD200D0E701 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4457AFA2133FAD200D0E701;
+			remoteInfo = FirstMacApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C4457AFB2133FAD200D0E701 /* FirstMacApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstMacApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4457AFE2133FAD300D0E701 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C4457AFF2133FAD300D0E701 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C4457B012133FAD300D0E701 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C4457B022133FAD300D0E701 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C4457B042133FAD300D0E701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C4457B072133FAD300D0E701 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C4457B092133FAD300D0E701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4457B0A2133FAD300D0E701 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C4457B0C2133FAD300D0E701 /* FirstMacApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirstMacApp.entitlements; sourceTree = "<group>"; };
+		C4457B112133FAD300D0E701 /* FirstMacAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstMacAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4457B152133FAD300D0E701 /* FirstMacAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstMacAppTests.m; sourceTree = "<group>"; };
+		C4457B172133FAD300D0E701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4457B1C2133FAD300D0E701 /* FirstMacAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstMacAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4457B202133FAD300D0E701 /* FirstMacAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstMacAppUITests.m; sourceTree = "<group>"; };
+		C4457B222133FAD300D0E701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4457B2E2134070100D0E701 /* main2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main2.storyboard; sourceTree = "<group>"; };
+		C4457B30213408C600D0E701 /* ios2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ios2.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4457AF82133FAD200D0E701 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4457B0E2133FAD300D0E701 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4457B192133FAD300D0E701 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C4457AF22133FAD200D0E701 = {
+			isa = PBXGroup;
+			children = (
+				C4457AFD2133FAD200D0E701 /* FirstMacApp */,
+				C4457B142133FAD300D0E701 /* FirstMacAppTests */,
+				C4457B1F2133FAD300D0E701 /* FirstMacAppUITests */,
+				C4457AFC2133FAD200D0E701 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C4457AFC2133FAD200D0E701 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4457AFB2133FAD200D0E701 /* FirstMacApp.app */,
+				C4457B112133FAD300D0E701 /* FirstMacAppTests.xctest */,
+				C4457B1C2133FAD300D0E701 /* FirstMacAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4457AFD2133FAD200D0E701 /* FirstMacApp */ = {
+			isa = PBXGroup;
+			children = (
+				C4457AFE2133FAD300D0E701 /* AppDelegate.h */,
+				C4457AFF2133FAD300D0E701 /* AppDelegate.m */,
+				C4457B012133FAD300D0E701 /* ViewController.h */,
+				C4457B022133FAD300D0E701 /* ViewController.m */,
+				C4457B042133FAD300D0E701 /* Assets.xcassets */,
+				C4457B062133FAD300D0E701 /* Main.storyboard */,
+				C4457B30213408C600D0E701 /* ios2.storyboard */,
+				C4457B2E2134070100D0E701 /* main2.storyboard */,
+				C4457B092133FAD300D0E701 /* Info.plist */,
+				C4457B0A2133FAD300D0E701 /* main.m */,
+				C4457B0C2133FAD300D0E701 /* FirstMacApp.entitlements */,
+			);
+			path = FirstMacApp;
+			sourceTree = "<group>";
+		};
+		C4457B142133FAD300D0E701 /* FirstMacAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				C4457B152133FAD300D0E701 /* FirstMacAppTests.m */,
+				C4457B172133FAD300D0E701 /* Info.plist */,
+			);
+			path = FirstMacAppTests;
+			sourceTree = "<group>";
+		};
+		C4457B1F2133FAD300D0E701 /* FirstMacAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C4457B202133FAD300D0E701 /* FirstMacAppUITests.m */,
+				C4457B222133FAD300D0E701 /* Info.plist */,
+			);
+			path = FirstMacAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C4457AFA2133FAD200D0E701 /* FirstMacApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4457B252133FAD300D0E701 /* Build configuration list for PBXNativeTarget "FirstMacApp" */;
+			buildPhases = (
+				C4457AF72133FAD200D0E701 /* Sources */,
+				C4457AF82133FAD200D0E701 /* Frameworks */,
+				C4457AF92133FAD200D0E701 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FirstMacApp;
+			productName = FirstMacApp;
+			productReference = C4457AFB2133FAD200D0E701 /* FirstMacApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C4457B102133FAD300D0E701 /* FirstMacAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4457B282133FAD300D0E701 /* Build configuration list for PBXNativeTarget "FirstMacAppTests" */;
+			buildPhases = (
+				C4457B0D2133FAD300D0E701 /* Sources */,
+				C4457B0E2133FAD300D0E701 /* Frameworks */,
+				C4457B0F2133FAD300D0E701 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4457B132133FAD300D0E701 /* PBXTargetDependency */,
+			);
+			name = FirstMacAppTests;
+			productName = FirstMacAppTests;
+			productReference = C4457B112133FAD300D0E701 /* FirstMacAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C4457B1B2133FAD300D0E701 /* FirstMacAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4457B2B2133FAD300D0E701 /* Build configuration list for PBXNativeTarget "FirstMacAppUITests" */;
+			buildPhases = (
+				C4457B182133FAD300D0E701 /* Sources */,
+				C4457B192133FAD300D0E701 /* Frameworks */,
+				C4457B1A2133FAD300D0E701 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4457B1E2133FAD300D0E701 /* PBXTargetDependency */,
+			);
+			name = FirstMacAppUITests;
+			productName = FirstMacAppUITests;
+			productReference = C4457B1C2133FAD300D0E701 /* FirstMacAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4457AF32133FAD200D0E701 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = lijunjie;
+				TargetAttributes = {
+					C4457AFA2133FAD200D0E701 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					C4457B102133FAD300D0E701 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C4457AFA2133FAD200D0E701;
+					};
+					C4457B1B2133FAD300D0E701 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C4457AFA2133FAD200D0E701;
+					};
+				};
+			};
+			buildConfigurationList = C4457AF62133FAD200D0E701 /* Build configuration list for PBXProject "FirstMacApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C4457AF22133FAD200D0E701;
+			productRefGroup = C4457AFC2133FAD200D0E701 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4457AFA2133FAD200D0E701 /* FirstMacApp */,
+				C4457B102133FAD300D0E701 /* FirstMacAppTests */,
+				C4457B1B2133FAD300D0E701 /* FirstMacAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C4457AF92133FAD200D0E701 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4457B052133FAD300D0E701 /* Assets.xcassets in Resources */,
+				C4457B082133FAD300D0E701 /* Main.storyboard in Resources */,
+				C4457B2F2134070100D0E701 /* main2.storyboard in Resources */,
+				C4457B31213408C600D0E701 /* ios2.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4457B0F2133FAD300D0E701 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4457B1A2133FAD300D0E701 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4457AF72133FAD200D0E701 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4457B032133FAD300D0E701 /* ViewController.m in Sources */,
+				C4457B0B2133FAD300D0E701 /* main.m in Sources */,
+				C4457B002133FAD300D0E701 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4457B0D2133FAD300D0E701 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4457B162133FAD300D0E701 /* FirstMacAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4457B182133FAD300D0E701 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4457B212133FAD300D0E701 /* FirstMacAppUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C4457B132133FAD300D0E701 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4457AFA2133FAD200D0E701 /* FirstMacApp */;
+			targetProxy = C4457B122133FAD300D0E701 /* PBXContainerItemProxy */;
+		};
+		C4457B1E2133FAD300D0E701 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4457AFA2133FAD200D0E701 /* FirstMacApp */;
+			targetProxy = C4457B1D2133FAD300D0E701 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C4457B062133FAD300D0E701 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4457B072133FAD300D0E701 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C4457B232133FAD300D0E701 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C4457B242133FAD300D0E701 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C4457B262133FAD300D0E701 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirstMacApp/FirstMacApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V2JCMRCU89;
+				INFOPLIST_FILE = FirstMacApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.x.ft.FirstMacApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C4457B272133FAD300D0E701 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirstMacApp/FirstMacApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V2JCMRCU89;
+				INFOPLIST_FILE = FirstMacApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.x.ft.FirstMacApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C4457B292133FAD300D0E701 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V2JCMRCU89;
+				INFOPLIST_FILE = FirstMacAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.x.ft.FirstMacAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FirstMacApp.app/Contents/MacOS/FirstMacApp";
+			};
+			name = Debug;
+		};
+		C4457B2A2133FAD300D0E701 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V2JCMRCU89;
+				INFOPLIST_FILE = FirstMacAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.x.ft.FirstMacAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FirstMacApp.app/Contents/MacOS/FirstMacApp";
+			};
+			name = Release;
+		};
+		C4457B2C2133FAD300D0E701 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V2JCMRCU89;
+				INFOPLIST_FILE = FirstMacAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.x.ft.FirstMacAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FirstMacApp;
+			};
+			name = Debug;
+		};
+		C4457B2D2133FAD300D0E701 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V2JCMRCU89;
+				INFOPLIST_FILE = FirstMacAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.x.ft.FirstMacAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FirstMacApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4457AF62133FAD200D0E701 /* Build configuration list for PBXProject "FirstMacApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4457B232133FAD300D0E701 /* Debug */,
+				C4457B242133FAD300D0E701 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4457B252133FAD300D0E701 /* Build configuration list for PBXNativeTarget "FirstMacApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4457B262133FAD300D0E701 /* Debug */,
+				C4457B272133FAD300D0E701 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4457B282133FAD300D0E701 /* Build configuration list for PBXNativeTarget "FirstMacAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4457B292133FAD300D0E701 /* Debug */,
+				C4457B2A2133FAD300D0E701 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4457B2B2133FAD300D0E701 /* Build configuration list for PBXNativeTarget "FirstMacAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4457B2C2133FAD300D0E701 /* Debug */,
+				C4457B2D2133FAD300D0E701 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C4457AF32133FAD200D0E701 /* Project object */;
+}
