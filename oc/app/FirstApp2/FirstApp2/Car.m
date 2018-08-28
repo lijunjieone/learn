@@ -11,6 +11,11 @@
 @implementation Car
 @synthesize name;
 @synthesize engine;
+@synthesize make;
+@synthesize model;
+@synthesize modelYear;
+@synthesize numberOfDoors;
+@synthesize mileage;
 
 -(id) init {
     if(self == [super init ]) {
@@ -44,6 +49,6 @@
 }
 
 - (void) print {
-    NSLog(@"e:%@ ,%@,t1:%@,t2:%@,t3:%@,t4:%@",name,engine,tires[0],tires[1],tires[2],tires[3]);
+    NSLog(@"name:%@ ,engine:%@,make:%@,model:%@,modelyear:%d,numberOfDoors:%d,mileage:%f,t1:%@,t2:%@,t3:%@,t4:%@",name,engine,make,model,modelYear,numberOfDoors,mileage,tires[0],tires[1],tires[2],tires[3]);
 }
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4457B722134EA2600D0E701 /* Garage.m in Sources */ = {isa = PBXBuildFile; fileRef = C4457B712134EA2600D0E701 /* Garage.m */; };
 		C46604F4212E878E00ADD80B /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = C46604F3212E878E00ADD80B /* test.m */; };
 		C46604F7212E896600ADD80B /* Tire.m in Sources */ = {isa = PBXBuildFile; fileRef = C46604F6212E896600ADD80B /* Tire.m */; };
 		C46604FA212E92A000ADD80B /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = C46604F9212E92A000ADD80B /* Car.m */; };
@@ -30,6 +31,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C4457B702134EA2600D0E701 /* Garage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Garage.h; sourceTree = "<group>"; };
+		C4457B712134EA2600D0E701 /* Garage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Garage.m; sourceTree = "<group>"; };
 		C46604F2212E877900ADD80B /* test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
 		C46604F3212E878E00ADD80B /* test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
 		C46604F5212E894300ADD80B /* Tire.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tire.h; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 				C46604F5212E894300ADD80B /* Tire.h */,
 				C46604F6212E896600ADD80B /* Tire.m */,
 				C46604F8212E928E00ADD80B /* Car.h */,
+				C4457B702134EA2600D0E701 /* Garage.h */,
+				C4457B712134EA2600D0E701 /* Garage.m */,
 				C46604F9212E92A000ADD80B /* Car.m */,
 				C4E038C52133942200E4D47F /* NSString+Number2.h */,
 				C4E038C62133942200E4D47F /* NSString+Number2.m */,
@@ -155,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4E038D021339BF100E4D47F /* CategoryThing+Thing2.m in Sources */,
+				C4457B722134EA2600D0E701 /* Garage.m in Sources */,
 				C4E038CA21339ADB00E4D47F /* CategoryThing.m in Sources */,
 				C4E038C72133942200E4D47F /* NSString+Number2.m in Sources */,
 				C4F0319F212D664000BCFBE2 /* main.m in Sources */,

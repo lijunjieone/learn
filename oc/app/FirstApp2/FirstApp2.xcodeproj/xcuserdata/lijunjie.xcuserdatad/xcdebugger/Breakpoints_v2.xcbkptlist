@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FirstApp2/main.m"
-            timestampString = "557061495.3696671"
+            timestampString = "557116767.855424"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "11"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FirstApp2/main.m"
-            timestampString = "557061495.370051"
+            timestampString = "557116767.855502"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FirstApp2/Car.m"
-            timestampString = "556964816.736281"
+            timestampString = "557116767.8555681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "-print"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FirstApp2/main.m"
-            timestampString = "557061495.3703589"
+            timestampString = "557116767.855624"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
             landmarkName = "test_nsvalue1"
             landmarkType = "9">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FirstApp2/main.m"
-            timestampString = "557061495.370625"
+            timestampString = "557116767.8556859"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "319"
-            endingLineNumber = "319"
+            startingLineNumber = "320"
+            endingLineNumber = "320"
             landmarkName = "test_retain"
             landmarkType = "9">
          </BreakpointContent>
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FirstApp2/Tire.m"
-            timestampString = "557061495.3709069"
+            timestampString = "557116767.855751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "121"
@@ -106,12 +106,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FirstApp2/Tire.m"
-            timestampString = "557061495.37096"
+            timestampString = "557116767.855804"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "120"
             endingLineNumber = "120"
             landmarkName = "-description"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FirstApp2/Car.m"
+            timestampString = "557116767.855855"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-print"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

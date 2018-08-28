@@ -14,6 +14,7 @@
 #import "CategoryThing.h"
 #import "CategoryThing+Thing1.h"
 #import "CategoryThing+Thing2.h"
+#import "Garage.h"
 
 
 BOOL areIntsdifferent(int thing1,int thing2)
@@ -368,7 +369,7 @@ void test_block3() {
     
     NSLog(@"%f * %f = %f ",a,b,mul());
     
-    a= 30,b=40;
+    a= 30;b=40;
     NSLog(@"%f * %f = %f ",a,b,mul());
 
     typedef double (^mul_block_ref2)(double c,double d);
@@ -423,6 +424,55 @@ void test_read_file() {
     phrase = [ NSArray arrayWithContentsOfFile:@"/tmp/a.txt"];
     NSLog(@"%@",phrase);
 }
+
+void test_car4() {
+    Car *car = [[ Car alloc] init ];
+    car.name = @"mazida";
+    car.make = @"Honda";
+    car.model = @"CRX";
+    car.modelYear = 4;
+    car.numberOfDoors = 4;
+    car.mileage = 110000;
+    for (int i = 0;i<4;i++) {
+        AllWeatherRedial *tire;
+        tire = [[AllWeatherRedial alloc] init];
+        [car setTire:tire atIndex:i];
+    }
+    
+    Slant6 *engine = [[Slant6 alloc ] init ];
+    car.engine = engine;
+    car.print;
+//    NSLog(@"Car is %@",car);
+}
+
+Car * makeCar(NSString *name,NSString *make,NSString *model,int modelYear,int numberOfDoors,float mileage){
+    Car *car = [[Car alloc] init];
+    car.name = name;
+    car.make = make;
+    car.model = model;
+    car.modelYear = modelYear;
+    car.numberOfDoors = numberOfDoors;
+    car.mileage = mileage;
+    for (int i = 0;i<4;i++) {
+        AllWeatherRedial *tire;
+        tire = [[AllWeatherRedial alloc] init];
+        [car setTire:tire atIndex:i];
+    }
+    Slant6 * engine = [[ Slant6 alloc ] init];
+    car.engine = engine;
+    return car;
+}
+
+
+void test_car5() {
+    Garage *garage = [[ Garage alloc ] init ];
+    garage.name = @"Lijunjie's Garage";
+    Car *car = makeCar(@"Herbie",@"Honda",@"CRT",1984,2,11000);
+    [garage addCar:car];
+    
+    [garage print];
+}
+
 int main(int argc, const char * argv[]) {
 //    BOOL areTheyDifferent;
 //    areTheyDifferent = areIntsdifferent(5,5);
@@ -446,7 +496,8 @@ int main(int argc, const char * argv[]) {
 //        test_block4();
 //        test_data();
 //        test_write_file();
-        test_read_file();
+//        test_read_file();
+        test_car5();
     }
     
     return 0;
