@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "CTFrameParser.h"
+#import "CTFrameParserConfig.h"
 
 @interface ViewController ()
 
@@ -16,6 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    CTFrameParserConfig *config = [[CTFrameParserConfig alloc ] init ];
+//    config.textColor = [UIColor redColor];
+//    config.width = self.ctView.width;
+//    
+//    CoreTextData *data = [CTFrameParser parseContent:@"test1111111111111111111111111" config:config];
+//    
+//    self.ctView.data = data;
+//    self.ctView.height = data.height;
+//    self.ctView.backgroundColor = [UIColor yellowColor];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
