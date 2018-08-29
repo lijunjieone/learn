@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "QuizViewController.h"
+#import "RHypnosisView.h"
+#import <Foundation/Foundation.h>
 
 @interface AppDelegate ()
 
@@ -15,16 +17,45 @@
 
 @implementation AppDelegate
 
-
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (void) handleQuiz {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     QuizViewController *quizVC = [ [ QuizViewController alloc ] init ];
     self.window.rootViewController = quizVC;
     self.window.backgroundColor = [ UIColor whiteColor];
     [self.window makeKeyAndVisible];
+}
+
+- (void) handleFirstView {
+    self.window = [[ UIWindow alloc ] initWithFrame:[[UIScreen mainScreen] bounds]];
+    CGRect firstFrame = CGRectMake(160,240,100,150);
+    
+    UIViewController *vc = [[UIViewController alloc]initWithNibName:nil
+                                                             bundle:nil];
+    self.window.rootViewController = vc;
+    
+    
+    RHypnosisView *firstView = [ [ RHypnosisView alloc] initWithFrame: firstFrame];
+    firstView.backgroundColor = [UIColor redColor];
+    [self.window addSubview:firstView];
+    CGRect secondFrame = CGRectMake(-10,-20,100,50);
+    CGRect secondBound = CGRectMake(0, 0, 50, 50);
+
+    RHypnosisView *secondView = [ [ RHypnosisView alloc] initWithFrame: secondFrame];
+    secondView.backgroundColor = [UIColor blueColor];
+    [secondView setBounds:secondBound];
+    [firstView addSubview:secondView];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+}
+
+
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after application launch.
+    [self handleFirstView];
     return YES;
 }
 
