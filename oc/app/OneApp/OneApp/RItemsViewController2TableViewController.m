@@ -40,7 +40,7 @@
     NSInteger lastRow = [self.tableView numberOfRowsInSection:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath]  withRowAnimation:UITableViewRowAnimationTop];
-    
+    [[RItemStore sharedStore] createItem];
 }
 
 -(IBAction)toggleEditingMode:(id)sender {
@@ -92,6 +92,10 @@
     NSUInteger count =[[[RItemStore sharedStore] allItems] count];
     return count;
 //    return 3;
+}
+
+- (void) tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    [[RItemStore sharedStore] moveItemAtIndexPath:sourceIndexPath toIndexPath:destinationIndexPath];
 }
 
 - (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
