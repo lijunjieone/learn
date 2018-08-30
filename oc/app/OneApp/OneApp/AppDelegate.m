@@ -12,6 +12,7 @@
 #import "RReminderViewController.h"
 #import "RHyponosisViewController.h"
 #import <Foundation/Foundation.h>
+#import "RItemsViewController.h"
 
 @interface AppDelegate ()
 
@@ -108,6 +109,16 @@
     
 }
 
+-(void) handleTableView {
+    self.window = [[ UIWindow alloc ] initWithFrame:[[UIScreen mainScreen ] bounds]];
+    RItemsViewController *ivc = [[ RItemsViewController alloc] init];
+    
+    self.window.rootViewController = ivc;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -115,6 +126,7 @@
 //    [self handleScrollView];
 //    [self handleViewController];
     [self handleTabBar];
+//    [self handleTableView];
     return YES;
 }
 
