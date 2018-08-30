@@ -39,8 +39,8 @@
 }
 
 - (NSArray *) allItems {
-    NSUInteger count = [ self.privateItems count];
-    return self.privateItems;
+//    NSUInteger count = [ self.privateItems count];
+    return [ self.privateItems copy];
 }
 
 - (RItem *) createItem {
@@ -48,6 +48,11 @@
     [self.privateItems addObject:item];
     return item;
     
+}
+
+-(void) removeItem:(RItem *) item;
+{
+    [self.privateItems removeObjectIdenticalTo:item];
 }
 
 @end

@@ -37,11 +37,22 @@
 
 
 -(IBAction)addNewItem:(id)sender {
+    NSInteger lastRow = [self.tableView numberOfRowsInSection:0];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[indexPath]  withRowAnimation:UITableViewRowAnimationTop];
     
 }
 
 -(IBAction)toggleEditingMode:(id)sender {
-    
+    if(self.isEditing) {
+        [sender setTitle:@"Edit" forState:UIControlStateNormal];
+        [self setEditing:NO animated:YES];
+        
+    }
+    else {
+        [sender setTitle:@"Done" forState:UIControlStateNormal];
+        [self setEditing:YES animated:YES];
+    }
 }
 
 - (UIView *) headerView {
@@ -81,6 +92,16 @@
     NSUInteger count =[[[RItemStore sharedStore] allItems] count];
     return count;
 //    return 3;
+}
+
+- (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(editingStyle == UITableViewCellEditingStyleDelete) {
+        NSArray *items = [[RItemStore sharedStore ] allItems];
+        RItem *item = items[indexPath.row];
+        
+        [ [RItemStore sharedStore] removeItem:item];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 

@@ -17,5 +17,6 @@
 +(id) sharedStore;
 
 -(RItem *) createItem;
+-(void) removeItem:(RItem *)item;
 
 @end
