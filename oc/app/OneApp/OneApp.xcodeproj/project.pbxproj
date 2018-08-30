@@ -19,6 +19,8 @@
 		C41CF3CF21363AAE003E9AA1 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41CF3CD21363AAE003E9AA1 /* QuizViewController.xib */; };
 		C41CF3E821367C0C003E9AA1 /* RHypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = C41CF3E721367C0C003E9AA1 /* RHypnosisView.m */; };
 		C43C7B642137C3C900463764 /* RtemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43C7B632137C3C900463764 /* RtemsViewController.xib */; };
+		C43C7B682137D58100463764 /* RDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C43C7B662137D58100463764 /* RDetailViewController.m */; };
+		C43C7B692137D58100463764 /* RDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43C7B672137D58100463764 /* RDetailViewController.xib */; };
 		C46BA48D2136BC55002902A8 /* RHyponosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C46BA48C2136BC55002902A8 /* RHyponosisViewController.m */; };
 		C46BA4992136C05E002902A8 /* RReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C46BA4972136C05E002902A8 /* RReminderViewController.m */; };
 		C46BA49A2136C05E002902A8 /* RReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46BA4982136C05E002902A8 /* RReminderViewController.xib */; };
@@ -67,6 +69,9 @@
 		C41CF3E621367C0C003E9AA1 /* RHypnosisView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHypnosisView.h; sourceTree = "<group>"; };
 		C41CF3E721367C0C003E9AA1 /* RHypnosisView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHypnosisView.m; sourceTree = "<group>"; };
 		C43C7B632137C3C900463764 /* RtemsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RtemsViewController.xib; sourceTree = "<group>"; };
+		C43C7B652137D58100463764 /* RDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDetailViewController.h; sourceTree = "<group>"; };
+		C43C7B662137D58100463764 /* RDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RDetailViewController.m; sourceTree = "<group>"; };
+		C43C7B672137D58100463764 /* RDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RDetailViewController.xib; sourceTree = "<group>"; };
 		C46BA48B2136BC55002902A8 /* RHyponosisViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHyponosisViewController.h; sourceTree = "<group>"; };
 		C46BA48C2136BC55002902A8 /* RHyponosisViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHyponosisViewController.m; sourceTree = "<group>"; };
 		C46BA4962136C05E002902A8 /* RReminderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RReminderViewController.h; sourceTree = "<group>"; };
@@ -154,6 +159,9 @@
 				C489612A2137B8940079AD79 /* RItemsViewController2TableViewController.h */,
 				C489612B2137B8940079AD79 /* RItemsViewController2TableViewController.m */,
 				C43C7B632137C3C900463764 /* RtemsViewController.xib */,
+				C43C7B662137D58100463764 /* RDetailViewController.m */,
+				C43C7B652137D58100463764 /* RDetailViewController.h */,
+				C43C7B672137D58100463764 /* RDetailViewController.xib */,
 			);
 			path = OneApp;
 			sourceTree = "<group>";
@@ -284,6 +292,7 @@
 			files = (
 				C43C7B642137C3C900463764 /* RtemsViewController.xib in Resources */,
 				C41CF3A621363592003E9AA1 /* LaunchScreen.storyboard in Resources */,
+				C43C7B692137D58100463764 /* RDetailViewController.xib in Resources */,
 				C41CF3A321363592003E9AA1 /* Assets.xcassets in Resources */,
 				C41CF3A121363592003E9AA1 /* Main.storyboard in Resources */,
 				C41CF3CF21363AAE003E9AA1 /* QuizViewController.xib in Resources */,
@@ -313,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46BA48D2136BC55002902A8 /* RHyponosisViewController.m in Sources */,
+				C43C7B682137D58100463764 /* RDetailViewController.m in Sources */,
 				C41CF39E21363592003E9AA1 /* ViewController.m in Sources */,
 				C489612C2137B8940079AD79 /* RItemsViewController2TableViewController.m in Sources */,
 				C41CF3A921363592003E9AA1 /* main.m in Sources */,

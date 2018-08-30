@@ -7,6 +7,7 @@
 //
 
 #import "RItemsViewController2TableViewController.h"
+#import "RDetailViewController.h"
 #import "RItemStore.h"
 #import "RItem.h"
 
@@ -94,6 +95,14 @@
 //    return 3;
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    RDetailViewController *detail = [[ RDetailViewController alloc ] init];
+    RItem *selectItem = [[RItemStore sharedStore] allItems][indexPath.row];
+    detail.item =selectItem;
+    [self.navigationController pushViewController:detail animated:YES];
+    
+}
 - (void) tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
     [[RItemStore sharedStore] moveItemAtIndexPath:sourceIndexPath toIndexPath:destinationIndexPath];
 }

@@ -120,13 +120,25 @@
     
 }
 
+-(void) handleNavgationView {
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    
+    RItemsViewController2TableViewController *ivc = [[ RItemsViewController2TableViewController alloc] init];
+    
+    UINavigationController *nc = [[ UINavigationController alloc] initWithRootViewController:ivc];
+    self.window.rootViewController = nc;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 //    [self handleFirstView];
 //    [self handleScrollView];
 //    [self handleViewController];
 //    [self handleTabBar];
-    [self handleTableView];
+//    [self handleTableView];
+    [self handleNavgationView];
     return YES;
 }
 
