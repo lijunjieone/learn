@@ -32,11 +32,15 @@
 
 - (id) initPrivate {
     self = [ super init ];
+    if (self) {
+        _privateItems = [[NSMutableArray alloc] init];
+    }
     return self;
 }
 
 - (NSArray *) allItems {
-    return [self.privateItems copy];
+    NSUInteger count = [ self.privateItems count];
+    return self.privateItems;
 }
 
 - (RItem *) createItem {

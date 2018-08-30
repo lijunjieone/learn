@@ -12,7 +12,7 @@
 #import "RReminderViewController.h"
 #import "RHyponosisViewController.h"
 #import <Foundation/Foundation.h>
-#import "RItemsViewController.h"
+#import "RItemsViewController2TableViewController.h"
 
 @interface AppDelegate ()
 
@@ -111,7 +111,7 @@
 
 -(void) handleTableView {
     self.window = [[ UIWindow alloc ] initWithFrame:[[UIScreen mainScreen ] bounds]];
-    RItemsViewController *ivc = [[ RItemsViewController alloc] init];
+    RItemsViewController2TableViewController *ivc = [[ RItemsViewController2TableViewController alloc] init];
     
     self.window.rootViewController = ivc;
     self.window.backgroundColor = [UIColor whiteColor];
@@ -125,8 +125,8 @@
 //    [self handleFirstView];
 //    [self handleScrollView];
 //    [self handleViewController];
-    [self handleTabBar];
-//    [self handleTableView];
+//    [self handleTabBar];
+    [self handleTableView];
     return YES;
 }
 

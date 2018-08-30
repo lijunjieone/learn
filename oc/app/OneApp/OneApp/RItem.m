@@ -31,8 +31,8 @@
 
 - (NSString *) description {
    
-    NSString *desc;
-    [desc initWithFormat:@"%@ %@ %@ %d", [self _itemName],[self _serialNumber],[self _dateCreated],[self _valueInDollars] ];
+    NSString *desc = [self _itemName];
+    
     return desc;
 }
 
