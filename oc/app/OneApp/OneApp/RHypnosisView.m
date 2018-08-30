@@ -8,6 +8,11 @@
 
 #import "RHypnosisView.h"
 
+@interface RHypnosisView()
+
+@property (strong,nonatomic) UIColor *circleColor;
+@end
+
 @implementation RHypnosisView
 
 /*
@@ -18,11 +23,18 @@
 }
 */
 
+- (void) setCircleColor:(UIColor *)color
+{
+    _circleColor=color;
+    [self setNeedsDisplay];
+    
+}
 - (id) initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if(self) {
         self.backgroundColor=[UIColor clearColor];
+        self.circleColor = [UIColor lightGrayColor];
         
     }
     return (self);
@@ -47,6 +59,8 @@
     
 }
 
+
+
 - (void) drawMulCircle
 {
     CGRect bounds = self.bounds;
@@ -62,9 +76,22 @@
         [ path moveToPoint:CGPointMake(center.x+currentRadius,center.y)];
         [path addArcWithCenter:center radius:currentRadius startAngle:0.0f endAngle:M_PI*2.0 clockwise:YES];
         path.lineWidth=5;
+        [self.circleColor setStroke];
         [path stroke];
     }
     
+}
+
+-(void) touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"%@ was touched",self);
+    
+    float red = (arc4random()%100)/100.0f;
+    float green = (arc4random()%100)/100.0f;
+    float blue = (arc4random()%100)/100.0f;
+    
+    UIColor *randomColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
+    self.circleColor = randomColor;
 }
 - (void)drawRect:(CGRect)rect
 {

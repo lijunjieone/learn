@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "QuizViewController.h"
 #import "RHypnosisView.h"
+#import "RReminderViewController.h"
+#import "RHyponosisViewController.h"
 #import <Foundation/Foundation.h>
 
 @interface AppDelegate ()
@@ -52,12 +54,67 @@
     
 }
 
+- (void) handleScrollView {
+    self.window = [[ UIWindow alloc ] initWithFrame:[[UIScreen mainScreen]bounds]];
+    
+    CGRect mainFrame = self.window.bounds;
+    
+    CGRect bigFrame = mainFrame;
+    bigFrame.size.width *=2.0f;
+    bigFrame.size.height *=2.0f;
+    
+    UIViewController *vc = [[ UIViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController = vc;
+    UIScrollView *scrollView = [[ UIScrollView alloc ] initWithFrame:mainFrame];
+    [self.window addSubview:scrollView];
+    
+    RHypnosisView *hView = [[RHypnosisView alloc] initWithFrame:bigFrame];
+    [scrollView addSubview: hView];
+    scrollView.contentSize = bigFrame.size;
+    self.window.backgroundColor = [UIColor whiteColor];
+}
 
+- (void) handleViewController {
+    self.window = [[ UIWindow alloc ] initWithFrame:[[UIScreen mainScreen ] bounds]];
+    RHyponosisViewController *hvc = [[ RHyponosisViewController alloc] init];
+//    self.window.rootViewController = hvc;
+    
+    NSBundle *appBundler = [NSBundle mainBundle];
+    RReminderViewController *rvc = [[ RReminderViewController alloc ] initWithNibName:@"RReminderViewController" bundle:appBundler];
+    
+    self.window.rootViewController = rvc;
+    self.window.backgroundColor = [ UIColor whiteColor];
+    [self.window makeKeyAndVisible ];
+    
+}
+
+
+- (void) handleTabBar {
+    self.window = [[UIWindow alloc ] initWithFrame:[[UIScreen mainScreen ] bounds ]];
+    RHyponosisViewController *hvc = [[ RHyponosisViewController alloc ] init ];
+    
+    NSBundle *appBundle = [NSBundle mainBundle ] ;
+    RReminderViewController *rvc = [[ RReminderViewController alloc ] initWithNibName:@"RReminderViewController" bundle:appBundle];
+    
+    UITabBarController *tabBarController = [[ UITabBarController alloc ] init];
+    tabBarController.viewControllers = @[hvc,rvc];
+    
+    self.window.rootViewController = tabBarController;
+    self.window.backgroundColor=[UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    
+    
+    
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [self handleFirstView];
+//    [self handleFirstView];
+//    [self handleScrollView];
+//    [self handleViewController];
+    [self handleTabBar];
     return YES;
 }
 
