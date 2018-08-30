@@ -27,6 +27,8 @@
         for (int i=0; i<10; i++) {
             [[RItemStore sharedStore] createItem];
         }
+        UINavigationItem *navItem = self.navigationItem;
+        navItem.title = @"HomePower";
     }
     NSUInteger count = [[[RItemStore sharedStore] allItems] count];
     return self;
@@ -140,6 +142,10 @@
 }
 
 
+-(void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];

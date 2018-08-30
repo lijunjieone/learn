@@ -18,6 +18,16 @@
 
 @implementation RDetailViewController
 
+-(id) init {
+    self = [super init];
+    if(self) {
+        UINavigationItem *navItem = self.navigationItem;
+        navItem.title = @"DetailView";
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -35,6 +45,17 @@
     self.serialField.text = item._serialNumber;
     self.valueField.text = [ NSString stringWithFormat:@"%d",item._valueInDollars];
     
+    
+    
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.view endEditing:YES];
+    RItem *item = self.item;
+    item._itemName = self.nameField.text;
+    item._serialNumber = self.serialField.text;
+    item._valueInDollars = [self.valueField.text intValue];
     
     
 }
