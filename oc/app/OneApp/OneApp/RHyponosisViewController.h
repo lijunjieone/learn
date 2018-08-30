@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface RHyponosisViewController : ViewController
+@interface RHyponosisViewController : ViewController 
 @property(nonatomic,strong) UIView *view;
 
 @end
