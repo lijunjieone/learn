@@ -13,6 +13,7 @@
 #import "RHyponosisViewController.h"
 #import <Foundation/Foundation.h>
 #import "RItemsViewController2TableViewController.h"
+#import "RDrawViewController.h"
 
 @interface AppDelegate ()
 
@@ -131,6 +132,17 @@
     [self.window makeKeyAndVisible];
 }
 
+-(void) handleDrawView {
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    
+    RDrawViewController *rdvc = [[RDrawViewController alloc] init];
+    self.window.rootViewController = rdvc;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 //    [self handleFirstView];
@@ -138,7 +150,8 @@
 //    [self handleViewController];
 //    [self handleTabBar];
 //    [self handleTableView];
-    [self handleNavgationView];
+//    [self handleNavgationView];
+    [self handleDrawView];
     return YES;
 }
 

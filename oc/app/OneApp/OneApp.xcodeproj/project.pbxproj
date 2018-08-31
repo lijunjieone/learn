@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C40AA7E82138E64E004471A2 /* BImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C40AA7E72138E64E004471A2 /* BImageStore.m */; };
+		C40AA7EB213905D9004471A2 /* RLine.m in Sources */ = {isa = PBXBuildFile; fileRef = C40AA7EA213905D9004471A2 /* RLine.m */; };
+		C40AA7F121390686004471A2 /* RDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40AA7F021390686004471A2 /* RDrawViewController.m */; };
+		C40AA7F4213906A8004471A2 /* RDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = C40AA7F3213906A8004471A2 /* RDrawView.m */; };
 		C41CF39B21363592003E9AA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C41CF39A21363592003E9AA1 /* AppDelegate.m */; };
 		C41CF39E21363592003E9AA1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C41CF39D21363592003E9AA1 /* ViewController.m */; };
 		C41CF3A121363592003E9AA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C41CF39F21363592003E9AA1 /* Main.storyboard */; };
@@ -50,6 +53,12 @@
 /* Begin PBXFileReference section */
 		C40AA7E62138E64E004471A2 /* BImageStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BImageStore.h; sourceTree = "<group>"; };
 		C40AA7E72138E64E004471A2 /* BImageStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BImageStore.m; sourceTree = "<group>"; };
+		C40AA7E9213905D9004471A2 /* RLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RLine.h; sourceTree = "<group>"; };
+		C40AA7EA213905D9004471A2 /* RLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RLine.m; sourceTree = "<group>"; };
+		C40AA7EF21390686004471A2 /* RDrawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDrawViewController.h; sourceTree = "<group>"; };
+		C40AA7F021390686004471A2 /* RDrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RDrawViewController.m; sourceTree = "<group>"; };
+		C40AA7F2213906A8004471A2 /* RDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDrawView.h; sourceTree = "<group>"; };
+		C40AA7F3213906A8004471A2 /* RDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RDrawView.m; sourceTree = "<group>"; };
 		C41CF39621363592003E9AA1 /* OneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C41CF39921363592003E9AA1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C41CF39A21363592003E9AA1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -167,6 +176,12 @@
 				C43C7B672137D58100463764 /* RDetailViewController.xib */,
 				C40AA7E62138E64E004471A2 /* BImageStore.h */,
 				C40AA7E72138E64E004471A2 /* BImageStore.m */,
+				C40AA7E9213905D9004471A2 /* RLine.h */,
+				C40AA7EA213905D9004471A2 /* RLine.m */,
+				C40AA7EF21390686004471A2 /* RDrawViewController.h */,
+				C40AA7F021390686004471A2 /* RDrawViewController.m */,
+				C40AA7F2213906A8004471A2 /* RDrawView.h */,
+				C40AA7F3213906A8004471A2 /* RDrawView.m */,
 			);
 			path = OneApp;
 			sourceTree = "<group>";
@@ -331,10 +346,13 @@
 				C41CF39E21363592003E9AA1 /* ViewController.m in Sources */,
 				C489612C2137B8940079AD79 /* RItemsViewController2TableViewController.m in Sources */,
 				C41CF3A921363592003E9AA1 /* main.m in Sources */,
+				C40AA7F4213906A8004471A2 /* RDrawView.m in Sources */,
 				C46BA4992136C05E002902A8 /* RReminderViewController.m in Sources */,
 				C40AA7E82138E64E004471A2 /* BImageStore.m in Sources */,
 				C48961292137AB6E0079AD79 /* RItem.m in Sources */,
+				C40AA7EB213905D9004471A2 /* RLine.m in Sources */,
 				C48961262137A92A0079AD79 /* RItemStore.m in Sources */,
+				C40AA7F121390686004471A2 /* RDrawViewController.m in Sources */,
 				C41CF3E821367C0C003E9AA1 /* RHypnosisView.m in Sources */,
 				C41CF39B21363592003E9AA1 /* AppDelegate.m in Sources */,
 				C41CF3CE21363AAE003E9AA1 /* QuizViewController.m in Sources */,
