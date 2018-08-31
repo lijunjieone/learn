@@ -10,7 +10,10 @@
 #import "RLine.h"
 
 
-@interface RDrawView()
+@interface RDrawView()<UIGestureRecognizerDelegate>
+
+@property (nonatomic,strong) UIPanGestureRecognizer *moveRecognizer;
+
 @property (nonatomic,strong) NSMutableDictionary *linesInProgress;
 //@property (nonatomic,strong) RLine *currentLine;
 @property (nonatomic,strong) NSMutableArray *finishedLines;
@@ -44,6 +47,11 @@
         
         [self addGestureRecognizer:pressRecognizer];
 
+        self.moveRecognizer = [[ UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveLine:)];
+        
+        self.moveRecognizer.delegate = self;
+        self.moveRecognizer.cancelsTouchesInView = NO;
+        [self addGestureRecognizer:self.moveRecognizer];
         
     }
     
@@ -189,6 +197,39 @@
     [self.finishedLines removeAllObjects];
 
     [self setNeedsDisplay];
+}
+
+-(BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(nonnull UIGestureRecognizer *)otherGestureRecognizer {
+    if(gestureRecognizer == self.moveRecognizer ) {
+        return YES;
+    }
+    else {
+        return NO;
+    }
+}
+
+-(void) moveLine:(UIPanGestureRecognizer *) gr {
+    if(!self.selectLine) {
+        return;
+    }
+    
+    if(gr.state ==  UIGestureRecognizerStateChanged) {
+        CGPoint translation = [ gr translationInView:self];
+        CGPoint begin = self.selectLine.begin;
+        CGPoint end = self.selectLine.end;
+        
+        begin.x +=translation.x;
+        begin.y +=translation.y;
+        
+        end.x +=translation.x;
+        end.y +=translation.y;
+        
+        self.selectLine.begin = begin;
+        self.selectLine.end = end;
+        
+        [self setNeedsDisplay];
+        [gr setTranslation:CGPointZero inView:self];
+    }
 }
 /*
 // Only override drawRect: if you perform custom drawing.
