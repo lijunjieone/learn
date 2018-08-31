@@ -13,10 +13,14 @@
 @property (weak, nonatomic) IBOutlet UITextField *serialField;
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
 @property (weak, nonatomic) IBOutlet UILabel *dateField;
+@property (weak, nonatomic) IBOutlet UIImageView *aImageView;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 
 @end
 
 @implementation RDetailViewController
+- (IBAction)takePicture:(id)sender {
+}
 
 -(id) init {
     self = [super init];
