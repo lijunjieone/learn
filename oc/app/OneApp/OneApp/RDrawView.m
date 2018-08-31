@@ -14,6 +14,7 @@
 @property (nonatomic,strong) NSMutableDictionary *linesInProgress;
 //@property (nonatomic,strong) RLine *currentLine;
 @property (nonatomic,strong) NSMutableArray *finishedLines;
+@property (nonatomic,strong) RLine *selectLine;
 
 @end
 @implementation RDrawView
@@ -28,16 +29,39 @@
         self.multipleTouchEnabled = YES;
         
         UITapGestureRecognizer *doubleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap2:)];
-        
+
         doubleTapRecognizer.numberOfTapsRequired =2;
+
         doubleTapRecognizer.delaysTouchesBegan = YES;
         [self addGestureRecognizer:doubleTapRecognizer];
+        
+        UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+        tapRecognizer.delaysTouchesBegan = YES;
+        [tapRecognizer requireGestureRecognizerToFail:doubleTapRecognizer];
+        [self addGestureRecognizer:tapRecognizer];
+
         
     }
     
     return self;
 }
 
+-(RLine *) lineAtPoint:(CGPoint)p {
+    for(RLine *line in self.finishedLines) {
+        CGPoint start = line.begin;
+        CGPoint end = line.end;
+        
+        for(float t=0.0;t<=1.0;t+=0.05) {
+            float x = start.x + t *(end.x - start.x);
+            float y = start.y + t * (end.y-start.y);
+            if(hypot(x-p.x, y-p.y) < 20.0) {
+                return line;
+            }
+        }
+    }
+    
+    return nil;
+}
 
 # pragma mark -draw
 
@@ -62,6 +86,12 @@
     for(NSValue *key in self.linesInProgress) {
         RLine *line = self.linesInProgress[key];
         [self strokeLine: line];
+    }
+    
+    if(self.selectLine) {
+        [[UIColor blueColor] set];
+        [self strokeLine:self.selectLine];
+        
     }
     
 }
@@ -108,6 +138,11 @@
     [self setNeedsDisplay];
 }
 
+-(void) tap:(UIGestureRecognizer *) gr {
+    CGPoint p = [gr locationInView:self];
+    self.selectLine  = [self lineAtPoint:p];
+    [self setNeedsDisplay];
+}
 
 -(void) doubleTap2:(UIGestureRecognizer *) gr {
     [self.linesInProgress removeAllObjects];
