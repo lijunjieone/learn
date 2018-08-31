@@ -8,7 +8,7 @@
 
 #import "RDetailViewController.h"
 #import "BImageStore.h"
-@interface RDetailViewController () <UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface RDetailViewController () <UINavigationControllerDelegate,UIImagePickerControllerDelegate,UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *serialField;
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
@@ -32,6 +32,16 @@
     imagePicker.delegate = self;
     
     [self presentViewController:imagePicker  animated:YES completion:nil];
+}
+
+- (BOOL) textFieldShouldBeginEditing:(UITextField *)textField {
+    [textField becomeFirstResponder];
+    return YES;
+}
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
