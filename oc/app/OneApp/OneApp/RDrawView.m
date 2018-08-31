@@ -11,8 +11,8 @@
 
 
 @interface RDrawView()
-
-@property (nonatomic,strong) RLine *currentLine;
+@property (nonatomic,strong) NSMutableDictionary *linesInProgress;
+//@property (nonatomic,strong) RLine *currentLine;
 @property (nonatomic,strong) NSMutableArray *finishedLines;
 
 @end
@@ -22,8 +22,10 @@
 -(id) initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if(self) {
+        self.linesInProgress = [[ NSMutableDictionary alloc] init];
         self.finishedLines = [[ NSMutableArray alloc] init];
         self.backgroundColor = [UIColor grayColor];
+        self.multipleTouchEnabled = YES;
         
     }
     
@@ -49,35 +51,52 @@
     for(RLine *line in self.finishedLines) {
         [self strokeLine:line];
     }
-    
-    if(self.currentLine) {
-        [[UIColor redColor] set];
-        [self strokeLine:self.currentLine];
+    [[UIColor redColor] set];
+
+    for(NSValue *key in self.linesInProgress) {
+        RLine *line = self.linesInProgress[key];
+        [self strokeLine: line];
     }
+    
 }
 
 
 -(void) touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    UITouch *t = [touches anyObject];
-    CGPoint location = [t locationInView:self];
-    self.currentLine = [[RLine alloc] init];
-    self.currentLine.begin = location;
-    self.currentLine.end = location;
-    
+    for(UITouch *t in touches) {
+        CGPoint location = [t locationInView:self];
+        RLine *currentLine = [[RLine alloc] init];
+        currentLine.begin = location;
+        currentLine.end = location;
+        NSValue *key = [NSValue valueWithNonretainedObject:t];
+        self.linesInProgress[key] = currentLine;
+        
+    }
+//    UITouch *t = [touches anyObject];
+   
     [self setNeedsDisplay];
 }
 
 -(void) touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    UITouch *t = [touches anyObject];
-    CGPoint loc = [t locationInView:self];
-    self.currentLine.end = loc;
+    for(UITouch *t in touches) {
+        NSValue *key = [NSValue valueWithNonretainedObject:t];
+        RLine *currentLine = self.linesInProgress[key];
+        CGPoint loc = [t locationInView:self];
+        currentLine.end = loc;
+    }
     [self setNeedsDisplay];
+
 }
 
 -(void) touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    [self.finishedLines addObject:self.currentLine];
-    self.currentLine = nil;
+    for(UITouch *t in touches) {
+        NSValue *key = [NSValue valueWithNonretainedObject:t];
+        RLine *currentLine = self.linesInProgress[key];
+        [self.finishedLines addObject:currentLine];
+        [self.linesInProgress removeObjectForKey:key];
+    }
+//    [self.finishedLines addObject:self.currentLine];
+//    self.currentLine = nil;
     [self setNeedsDisplay];
 }
 /*
