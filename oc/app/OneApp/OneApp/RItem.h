@@ -10,20 +10,13 @@
 
 
 @interface RItem : NSObject
-{
-    
-    NSString * _itemName;
-    NSString * _serialNumber;
-    int _valueInDollars;
-    
-    NSDate * _dateCreated;
-    
-}
+
 
 @property (nonatomic) NSString *  _itemName;
 @property (nonatomic,readwrite) NSString * _serialNumber;
 @property (nonatomic) int _valueInDollars;
-@property (nonatomic) NSDate * _dateCreated;
+@property (nonatomic,readonly,strong) NSDate * _dateCreated;
+@property (nonatomic,copy) NSString *itemKey;
 
 + (RItem *) randomItem;
 - (NSString *) description;
