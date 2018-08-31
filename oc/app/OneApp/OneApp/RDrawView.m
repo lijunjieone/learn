@@ -27,6 +27,12 @@
         self.backgroundColor = [UIColor grayColor];
         self.multipleTouchEnabled = YES;
         
+        UITapGestureRecognizer *doubleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap2:)];
+        
+        doubleTapRecognizer.numberOfTapsRequired =2;
+        doubleTapRecognizer.delaysTouchesBegan = YES;
+        [self addGestureRecognizer:doubleTapRecognizer];
+        
     }
     
     return self;
@@ -60,6 +66,8 @@
     
 }
 
+
+# pragma mark -handle touch
 
 -(void) touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     for(UITouch *t in touches) {
@@ -97,6 +105,13 @@
     }
 //    [self.finishedLines addObject:self.currentLine];
 //    self.currentLine = nil;
+    [self setNeedsDisplay];
+}
+
+
+-(void) doubleTap2:(UIGestureRecognizer *) gr {
+    [self.linesInProgress removeAllObjects];
+    [self.finishedLines removeAllObjects];
     [self setNeedsDisplay];
 }
 /*
