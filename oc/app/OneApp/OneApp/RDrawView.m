@@ -141,12 +141,34 @@
 -(void) tap:(UIGestureRecognizer *) gr {
     CGPoint p = [gr locationInView:self];
     self.selectLine  = [self lineAtPoint:p];
+    if(self.selectLine) {
+        [self becomeFirstResponder];
+        UIMenuController *menu = [UIMenuController sharedMenuController];
+        UIMenuItem *deleteItem = [[UIMenuItem alloc] initWithTitle:@"Delete" action:@selector(deleteLine:)];
+        menu.menuItems=@[deleteItem];
+        
+        [menu setTargetRect:CGRectMake(p.x,p.y,2,2) inView:self];
+        [menu setMenuVisible:YES animated:YES];
+    } else {
+        [[UIMenuController sharedMenuController]setMenuVisible:NO animated:YES];
+    }
+    [self setNeedsDisplay];
+}
+
+-(BOOL) canBecomeFirstResponder {
+    return YES;
+}
+
+- (void) deleteLine:(id)sender {
+    [self.finishedLines removeObject:self.selectLine];
+    self.selectLine=nil;
     [self setNeedsDisplay];
 }
 
 -(void) doubleTap2:(UIGestureRecognizer *) gr {
     [self.linesInProgress removeAllObjects];
     [self.finishedLines removeAllObjects];
+
     [self setNeedsDisplay];
 }
 /*
