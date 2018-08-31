@@ -19,6 +19,22 @@
 @end
 
 @implementation RDetailViewController
+
+#pragma mark init
+
+-(id) init {
+    self = [super init];
+    if(self) {
+        UINavigationItem *navItem = self.navigationItem;
+        navItem.title = @"DetailView";
+    }
+    
+    return self;
+}
+
+#pragma mark action
+
+
 - (IBAction)takePicture:(id)sender {
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     
@@ -32,6 +48,10 @@
     imagePicker.delegate = self;
     
     [self presentViewController:imagePicker  animated:YES completion:nil];
+}
+
+- (IBAction)backgroundTapped:(id)sender {
+    [self.view endEditing:YES];
 }
 
 - (BOOL) textFieldShouldBeginEditing:(UITextField *)textField {
@@ -52,16 +72,8 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
--(id) init {
-    self = [super init];
-    if(self) {
-        UINavigationItem *navItem = self.navigationItem;
-        navItem.title = @"DetailView";
-    }
-    
-    return self;
-}
 
+#pragma view show
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
