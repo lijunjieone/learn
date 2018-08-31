@@ -7,7 +7,7 @@
 //
 
 #import "RDetailViewController.h"
-
+#import "BImageStore.h"
 @interface RDetailViewController () <UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *serialField;
@@ -38,6 +38,8 @@
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     
     self.aImageView.image = image;
+    [[BImageStore sharedStore] setImage:image forKey:self.item.itemKey];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 -(id) init {
@@ -66,6 +68,10 @@
     self.nameField.text = item._itemName;
     self.serialField.text = item._serialNumber;
     self.valueField.text = [ NSString stringWithFormat:@"%d",item._valueInDollars];
+    UIImage *image = [[ BImageStore sharedStore] imageForKey:item.itemKey];
+    if(image) {
+        self.aImageView.image = image;
+    }
     
     
     
