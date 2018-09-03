@@ -76,6 +76,27 @@
 #pragma view show
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImageView *iv = [[UIImageView alloc] initWithImage:nil];
+    
+    iv.contentMode = UIViewContentModeScaleAspectFit;
+    
+    iv.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [self.view addSubview:iv];
+    
+    self.aImageView = iv;
+    
+    NSDictionary *nameMap=@{@"imageView":self.aImageView,
+                            @"dataLabel":self.dateField,
+                            @"toolbar":self.toolbar
+                            };
+    
+    NSArray *hConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[imageView]-0-|" options:0 metrics:nil views:nameMap];
+
+    NSArray *vConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[dataLabel]-[imageView]-[toolbar]" options:0 metrics:nil views:nameMap];
+    
+    [ self.view addConstraints:hConstraints ];
+    [ self.view addConstraints:vConstraints];
     // Do any additional setup after loading the view from its nib.
 }
 
