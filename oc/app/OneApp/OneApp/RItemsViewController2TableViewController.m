@@ -10,6 +10,7 @@
 #import "RDetailViewController.h"
 #import "RItemStore.h"
 #import "RItem.h"
+#import "RItemCellTableViewCell.h"
 
 
 
@@ -40,10 +41,11 @@
 
 
 -(IBAction)addNewItem:(id)sender {
+    [[RItemStore sharedStore] createItem];
+
     NSInteger lastRow = [self.tableView numberOfRowsInSection:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath]  withRowAnimation:UITableViewRowAnimationTop];
-    [[RItemStore sharedStore] createItem];
 }
 
 -(IBAction)toggleEditingMode:(id)sender {
@@ -67,8 +69,10 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
 
+    UINib *nib = [ UINib nibWithNibName:@"RItemCellTableViewCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"RItemCellTableViewCell"];
     UIView *header = self.headerView;
     [self.tableView setTableHeaderView:header];
     // Uncomment the following line to preserve selection between presentations.
@@ -132,19 +136,28 @@
     // 创建 UITableViewCell 对象，风格使用默认的 UITableViewCellStyleDefault
     //    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
     
-    // 创建或重用 UITableViewCell 对象
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
-    
-    // 获取 allItems 的第 n 个 BNRItem 对象，
-    // 然后将该 BNRItem 对象的描述信息赋给 UITableViewCell 对象的 textLabel
-    // 这里的 n 是该 UITableViewCell 对象所对应的表格行索引
-    NSArray *items = [[RItemStore sharedStore] allItems];
-    RItem *item = items[indexPath.row]; //0-9
-    
-    NSLog(@"indexPath.row == %lu", indexPath.row);
-    
-    cell.textLabel.text = [item description];
+//    // 创建或重用 UITableViewCell 对象
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+//
+//    // 获取 allItems 的第 n 个 BNRItem 对象，
+//    // 然后将该 BNRItem 对象的描述信息赋给 UITableViewCell 对象的 textLabel
+//    // 这里的 n 是该 UITableViewCell 对象所对应的表格行索引
+//    NSArray *items = [[RItemStore sharedStore] allItems];
+//    RItem *item = items[indexPath.row]; //0-9
+//
+//    NSLog(@"indexPath.row == %lu", indexPath.row);
+//
+//    cell.textLabel.text = [item description];
 //    cell.textLabel.text = @"test";
+    
+    
+    RItemCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RItemCellTableViewCell" forIndexPath:indexPath];
+    NSArray *items = [[ RItemStore sharedStore] allItems];
+    RItem *item = items[indexPath.row];
+    cell.textLabel.text = item.description;
+    cell.nameLabel.text = item._itemName;
+    cell.serialNumberLabel.text = item._serialNumber;
+    cell.valueLabel.text = [ NSString stringWithFormat:@"$%d",item._valueInDollars];
     
     return cell;
 }

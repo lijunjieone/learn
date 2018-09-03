@@ -18,9 +18,14 @@
 +(id) sharedStore {
     static RItemStore *sharedStore = nil;
     
-    if(!sharedStore) {
-        sharedStore = [[ self alloc ] initPrivate ];
-    }
+//    if(!sharedStore) {
+//        sharedStore = [[ self alloc ] initPrivate ];
+//    }
+    
+    static dispatch_once_t oneToken;
+    dispatch_once(&oneToken,^{
+        sharedStore = [[ self alloc ] initPrivate];
+    });
     
     return sharedStore;
 }
@@ -55,4 +60,18 @@
     [self.privateItems removeObjectIdenticalTo:item];
 }
 
+
+# pragma mark store data
+-(NSString *) itemArchivePath {
+    NSArray * documentDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    NSString * documentDir = [documentDirs firstObject];
+    return [ documentDir stringByAppendingPathComponent:@"item.archive"];
+    
+}
+
+-(BOOL) saveChanges {
+
+    NSString *path = [self itemArchivePath];
+    return [NSKeyedArchiver archiveRootObject:self.privateItems toFile:path];
+}
 @end

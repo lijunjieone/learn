@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface RItem : NSObject
+@interface RItem : NSObject<NSCopying>
 
 
 @property (nonatomic) NSString *  _itemName;

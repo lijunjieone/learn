@@ -18,5 +18,6 @@
 
 -(RItem *) createItem;
 -(void) removeItem:(RItem *)item;
+-(BOOL) saveChanges;
 
 @end
