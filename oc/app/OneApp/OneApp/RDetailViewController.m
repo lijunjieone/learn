@@ -8,7 +8,10 @@
 
 #import "RDetailViewController.h"
 #import "BImageStore.h"
-@interface RDetailViewController () <UINavigationControllerDelegate,UIImagePickerControllerDelegate,UITextFieldDelegate>
+@interface RDetailViewController () <UINavigationControllerDelegate,UIImagePickerControllerDelegate,UITextFieldDelegate
+,UIPopoverControllerDelegate>
+@property (strong,nonatomic) UIPopoverController *imagePickerPopover;
+
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *serialField;
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
@@ -32,6 +35,27 @@
     return self;
 }
 
+
+-(id) initForNewItem:(BOOL) isNew
+{
+    self = [super initWithNibName:nil bundle:nil];
+    if(self) {
+        if(isNew) {
+            UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(save:)];
+            self.navigationItem.rightBarButtonItem = doneItem;
+            UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
+            
+            self.navigationItem.leftBarButtonItem = cancelItem;
+        }
+    }
+    
+    return self;
+}
+
+-(id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    @throw [NSException exceptionWithName:@"Wrong init method" reason:@"Use initForNewItem" userInfo:nil];
+    return nil;
+}
 #pragma mark action
 
 
@@ -47,7 +71,22 @@
     
     imagePicker.delegate = self;
     
-    [self presentViewController:imagePicker  animated:YES completion:nil];
+    
+    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad ) {
+        self.imagePickerPopover = [[UIPopoverController alloc] initWithContentViewController:imagePicker];
+        self.imagePickerPopover.delegate = self;
+        
+        [self.imagePickerPopover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }else {
+        [self presentViewController:imagePicker  animated:YES completion:nil];
+
+    }
+}
+
+-(void) popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    self.imagePickerPopover = nil;
+    
+    
 }
 
 - (IBAction)backgroundTapped:(id)sender {
@@ -72,6 +111,17 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma mark handle by myself
+
+-(void) save:(id) sender {
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void) cancel:(id) sender {
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 #pragma view show
 - (void)viewDidLoad {

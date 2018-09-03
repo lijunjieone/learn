@@ -99,11 +99,19 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    RDetailViewController *detail = [[ RDetailViewController alloc ] init];
+//    RDetailViewController *detail = [[ RDetailViewController alloc ] init];
+    RDetailViewController *detail = [[ RDetailViewController alloc ] initForNewItem:YES];
+    
     RItem *selectItem = [[RItemStore sharedStore] allItems][indexPath.row];
     detail.item =selectItem;
-    [self.navigationController pushViewController:detail animated:YES];
-    
+//    [self.navigationController pushViewController:detail animated:YES];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:detail];
+//    self.navigationController = navController;
+//    [self.navigationController ]
+//    [self navigationController:navController];
+//    [self.navigationController presentedViewController:navController];
+    navController.modalPresentationStyle = UIModalPresentationFormSheet;
+    [self presentViewController:navController animated:YES completion:nil];
 }
 - (void) tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
     [[RItemStore sharedStore] moveItemAtIndexPath:sourceIndexPath toIndexPath:destinationIndexPath];

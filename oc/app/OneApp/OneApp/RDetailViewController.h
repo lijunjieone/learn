@@ -12,4 +12,5 @@
 @interface RDetailViewController : UIViewController
 @property (nonatomic,strong) RItem *item;
 
+-(id) initForNewItem:(BOOL)isNew;
 @end
