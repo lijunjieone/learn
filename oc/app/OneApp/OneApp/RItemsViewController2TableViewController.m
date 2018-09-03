@@ -154,7 +154,7 @@
     RItemCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RItemCellTableViewCell" forIndexPath:indexPath];
     NSArray *items = [[ RItemStore sharedStore] allItems];
     RItem *item = items[indexPath.row];
-    cell.textLabel.text = item.description;
+//    cell.textLabel.text = item.description;
     cell.nameLabel.text = item._itemName;
     cell.serialNumberLabel.text = item._serialNumber;
     cell.valueLabel.text = [ NSString stringWithFormat:@"$%d",item._valueInDollars];
