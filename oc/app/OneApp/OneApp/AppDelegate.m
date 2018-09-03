@@ -150,8 +150,8 @@
 //    [self handleViewController];
 //    [self handleTabBar];
 //    [self handleTableView];
-//    [self handleNavgationView];
-    [self handleDrawView];
+    [self handleNavgationView];
+//    [self handleDrawView];
     return YES;
 }
 
