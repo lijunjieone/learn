@@ -15,6 +15,7 @@
 #import "RItemsViewController2TableViewController.h"
 #import "RDrawViewController.h"
 #import "RItemStore.h"
+#import "RCoursesViewController.h"
 
 @interface AppDelegate ()
 
@@ -144,6 +145,16 @@
     
 }
 
+-(void) handleWebView {
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    
+    RCoursesViewController *cvc = [[RCoursesViewController alloc ]initWithStyle:UITableViewStylePlain];
+    
+    UINavigationController *masterNav = [[UINavigationController alloc] initWithRootViewController:cvc];
+    self.window.rootViewController = masterNav;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 //    [self handleFirstView];
@@ -151,7 +162,8 @@
 //    [self handleViewController];
 //    [self handleTabBar];
 //    [self handleTableView];
-    [self handleNavgationView];
+//    [self handleNavgationView];
+    [self handleWebView];
 //    [self handleDrawView];
     return YES;
 }

@@ -166,6 +166,8 @@
         self.aImageView.image = image;
     }
     
+    [self updateFonts];
+    
     
     
 }
@@ -179,6 +181,17 @@
     item._valueInDollars = [self.valueField.text intValue];
     
     
+}
+
+# pragma mark - font
+
+-(void) updateFonts {
+    UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    self.nameField.font = font;
+    self.serialField.font = font;
+    self.valueField.font = font;
+    self.dateField.font =font;
+    self.nameField.font=font;
 }
 /*
 #pragma mark - Navigation

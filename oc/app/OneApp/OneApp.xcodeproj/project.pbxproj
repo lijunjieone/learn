@@ -33,6 +33,8 @@
 		C489612C2137B8940079AD79 /* RItemsViewController2TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C489612B2137B8940079AD79 /* RItemsViewController2TableViewController.m */; };
 		C4D5AEE5213D539800811786 /* RItemCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D5AEE3213D539800811786 /* RItemCellTableViewCell.m */; };
 		C4D5AEE6213D539800811786 /* RItemCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D5AEE4213D539800811786 /* RItemCellTableViewCell.xib */; };
+		C4D5AEF4213E34BF00811786 /* RCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D5AEF2213E34BF00811786 /* RCoursesViewController.m */; };
+		C4D5AEF5213E34BF00811786 /* RCoursesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D5AEF3213E34BF00811786 /* RCoursesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,9 @@
 		C4D5AEE2213D539800811786 /* RItemCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RItemCellTableViewCell.h; sourceTree = "<group>"; };
 		C4D5AEE3213D539800811786 /* RItemCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RItemCellTableViewCell.m; sourceTree = "<group>"; };
 		C4D5AEE4213D539800811786 /* RItemCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RItemCellTableViewCell.xib; sourceTree = "<group>"; };
+		C4D5AEF1213E34BF00811786 /* RCoursesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCoursesViewController.h; sourceTree = "<group>"; };
+		C4D5AEF2213E34BF00811786 /* RCoursesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCoursesViewController.m; sourceTree = "<group>"; };
+		C4D5AEF3213E34BF00811786 /* RCoursesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RCoursesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +195,9 @@
 				C4D5AEE2213D539800811786 /* RItemCellTableViewCell.h */,
 				C4D5AEE3213D539800811786 /* RItemCellTableViewCell.m */,
 				C4D5AEE4213D539800811786 /* RItemCellTableViewCell.xib */,
+				C4D5AEF1213E34BF00811786 /* RCoursesViewController.h */,
+				C4D5AEF2213E34BF00811786 /* RCoursesViewController.m */,
+				C4D5AEF3213E34BF00811786 /* RCoursesViewController.xib */,
 			);
 			path = OneApp;
 			sourceTree = "<group>";
@@ -326,6 +334,7 @@
 				C41CF3CF21363AAE003E9AA1 /* QuizViewController.xib in Resources */,
 				C46BA49A2136C05E002902A8 /* RReminderViewController.xib in Resources */,
 				C4D5AEE6213D539800811786 /* RItemCellTableViewCell.xib in Resources */,
+				C4D5AEF5213E34BF00811786 /* RCoursesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +371,7 @@
 				C48961292137AB6E0079AD79 /* RItem.m in Sources */,
 				C40AA7EB213905D9004471A2 /* RLine.m in Sources */,
 				C48961262137A92A0079AD79 /* RItemStore.m in Sources */,
+				C4D5AEF4213E34BF00811786 /* RCoursesViewController.m in Sources */,
 				C40AA7F121390686004471A2 /* RDrawViewController.m in Sources */,
 				C41CF3E821367C0C003E9AA1 /* RHypnosisView.m in Sources */,
 				C41CF39B21363592003E9AA1 /* AppDelegate.m in Sources */,
