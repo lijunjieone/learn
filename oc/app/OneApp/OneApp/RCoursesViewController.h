@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RWebViewController.h"
 
 @interface RCoursesViewController : UITableViewController
-
+@property (nonatomic) RWebViewController *webViewController;
 @end

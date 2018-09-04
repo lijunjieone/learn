@@ -149,7 +149,8 @@
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     
     RCoursesViewController *cvc = [[RCoursesViewController alloc ]initWithStyle:UITableViewStylePlain];
-    
+    RWebViewController *webviewController = [[ RWebViewController alloc]init];
+    cvc.webViewController = webviewController;
     UINavigationController *masterNav = [[UINavigationController alloc] initWithRootViewController:cvc];
     self.window.rootViewController = masterNav;
     self.window.backgroundColor = [UIColor whiteColor];

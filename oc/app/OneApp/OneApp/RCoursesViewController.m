@@ -51,6 +51,15 @@ NSString * url=@"https://bookapi.bignerdranch.com/courses.json";
     
 }
 
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *course = self.courses[indexPath.row];
+    NSURL *url = [NSURL URLWithString:course[@"url"]];
+    
+    self.webViewController.title = course[@"title"];
+    self.webViewController.url = url;
+    [self.navigationController pushViewController:self.webViewController animated:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

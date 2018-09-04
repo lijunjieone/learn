@@ -35,6 +35,7 @@
 		C4D5AEE6213D539800811786 /* RItemCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D5AEE4213D539800811786 /* RItemCellTableViewCell.xib */; };
 		C4D5AEF4213E34BF00811786 /* RCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D5AEF2213E34BF00811786 /* RCoursesViewController.m */; };
 		C4D5AEF5213E34BF00811786 /* RCoursesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D5AEF3213E34BF00811786 /* RCoursesViewController.xib */; };
+		C4D5AEF8213E535100811786 /* RWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D5AEF7213E535100811786 /* RWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,8 @@
 		C4D5AEF1213E34BF00811786 /* RCoursesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCoursesViewController.h; sourceTree = "<group>"; };
 		C4D5AEF2213E34BF00811786 /* RCoursesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCoursesViewController.m; sourceTree = "<group>"; };
 		C4D5AEF3213E34BF00811786 /* RCoursesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RCoursesViewController.xib; sourceTree = "<group>"; };
+		C4D5AEF6213E535100811786 /* RWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RWebViewController.h; sourceTree = "<group>"; };
+		C4D5AEF7213E535100811786 /* RWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +201,8 @@
 				C4D5AEF1213E34BF00811786 /* RCoursesViewController.h */,
 				C4D5AEF2213E34BF00811786 /* RCoursesViewController.m */,
 				C4D5AEF3213E34BF00811786 /* RCoursesViewController.xib */,
+				C4D5AEF6213E535100811786 /* RWebViewController.h */,
+				C4D5AEF7213E535100811786 /* RWebViewController.m */,
 			);
 			path = OneApp;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 				C43C7B682137D58100463764 /* RDetailViewController.m in Sources */,
 				C41CF39E21363592003E9AA1 /* ViewController.m in Sources */,
 				C489612C2137B8940079AD79 /* RItemsViewController2TableViewController.m in Sources */,
+				C4D5AEF8213E535100811786 /* RWebViewController.m in Sources */,
 				C41CF3A921363592003E9AA1 /* main.m in Sources */,
 				C40AA7F4213906A8004471A2 /* RDrawView.m in Sources */,
 				C46BA4992136C05E002902A8 /* RReminderViewController.m in Sources */,
