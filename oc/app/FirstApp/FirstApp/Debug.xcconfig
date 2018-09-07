@@ -1,0 +1,10 @@
+//
+//  Debug.xcconfig
+//  FirstApp
+//
+//  Created by lijunjie on 07/09/2018.
+//  Copyright © 2018 lijunjie. All rights reserved.
+//
+
+#include "../Flutter/Flutter.xcconfig"
+
