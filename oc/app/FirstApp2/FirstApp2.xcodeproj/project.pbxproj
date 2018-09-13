@@ -11,6 +11,7 @@
 		C46604F4212E878E00ADD80B /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = C46604F3212E878E00ADD80B /* test.m */; };
 		C46604F7212E896600ADD80B /* Tire.m in Sources */ = {isa = PBXBuildFile; fileRef = C46604F6212E896600ADD80B /* Tire.m */; };
 		C46604FA212E92A000ADD80B /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = C46604F9212E92A000ADD80B /* Car.m */; };
+		C4B5D425214691EC0027AE36 /* TSOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B5D424214691EC0027AE36 /* TSOperation.m */; };
 		C4E038C72133942200E4D47F /* NSString+Number2.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E038C62133942200E4D47F /* NSString+Number2.m */; };
 		C4E038CA21339ADB00E4D47F /* CategoryThing.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E038C921339ADB00E4D47F /* CategoryThing.m */; };
 		C4E038CD21339B2900E4D47F /* CategoryThing+Thing1.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E038CC21339B2900E4D47F /* CategoryThing+Thing1.m */; };
@@ -39,6 +40,8 @@
 		C46604F6212E896600ADD80B /* Tire.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tire.m; sourceTree = "<group>"; };
 		C46604F8212E928E00ADD80B /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		C46604F9212E92A000ADD80B /* Car.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		C4B5D423214691EC0027AE36 /* TSOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOperation.h; sourceTree = "<group>"; };
+		C4B5D424214691EC0027AE36 /* TSOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOperation.m; sourceTree = "<group>"; };
 		C4E038C52133942200E4D47F /* NSString+Number2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Number2.h"; sourceTree = "<group>"; };
 		C4E038C62133942200E4D47F /* NSString+Number2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Number2.m"; sourceTree = "<group>"; };
 		C4E038C821339ADB00E4D47F /* CategoryThing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryThing.h; sourceTree = "<group>"; };
@@ -82,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				C4F0319E212D664000BCFBE2 /* main.m */,
+				C4B5D423214691EC0027AE36 /* TSOperation.h */,
+				C4B5D424214691EC0027AE36 /* TSOperation.m */,
 				C4E038C821339ADB00E4D47F /* CategoryThing.h */,
 				C4E038C921339ADB00E4D47F /* CategoryThing.m */,
 				C4E038CB21339B2900E4D47F /* CategoryThing+Thing1.h */,
@@ -163,6 +168,7 @@
 				C4457B722134EA2600D0E701 /* Garage.m in Sources */,
 				C4E038CA21339ADB00E4D47F /* CategoryThing.m in Sources */,
 				C4E038C72133942200E4D47F /* NSString+Number2.m in Sources */,
+				C4B5D425214691EC0027AE36 /* TSOperation.m in Sources */,
 				C4F0319F212D664000BCFBE2 /* main.m in Sources */,
 				C46604F7212E896600ADD80B /* Tire.m in Sources */,
 				C4E038CD21339B2900E4D47F /* CategoryThing+Thing1.m in Sources */,

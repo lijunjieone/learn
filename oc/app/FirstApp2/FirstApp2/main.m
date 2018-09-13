@@ -15,6 +15,7 @@
 #import "CategoryThing+Thing1.h"
 #import "CategoryThing+Thing2.h"
 #import "Garage.h"
+#import "TSOperation.h"
 
 
 BOOL areIntsdifferent(int thing1,int thing2)
@@ -482,6 +483,53 @@ void test_car5() {
     [garage print];
 }
 
+
+void test_oper1() {
+    TSOperation *op = [[TSOperation alloc] init];
+    
+    [op useInvocationOperation];
+}
+
+void test_oper2() {
+    TSOperation *op = [[TSOperation alloc] init];
+//    [op useBlockOperation];
+//    [op useBlockOperationAddExecutionBock ];
+//    [op addOperationToQueue ];
+//    [op setMaxConcurrentOperationCount];
+//    [op communication];
+    [op initTicketStatusNotSave];
+}
+
+
+@interface YSCOperation : NSOperation
+
+@end
+
+@implementation YSCOperation
+
+- (void)main {
+    if (!self.isCancelled) {
+        for (int i = 0; i < 12; i++) {
+            [NSThread sleepForTimeInterval:2];
+            NSLog(@"1---%@", [NSThread currentThread]);
+        }
+    }
+}
+
+@end
+
+void test_oper3() {
+    YSCOperation *op = [[ YSCOperation alloc] init];
+    
+    [op start];
+}
+
+void test_oper4() {
+    TSOperation *op = [[ TSOperation alloc] init];
+    [op testQueue];
+}
+
+
 int main(int argc, const char * argv[]) {
 //    BOOL areTheyDifferent;
 //    areTheyDifferent = areIntsdifferent(5,5);
@@ -506,7 +554,10 @@ int main(int argc, const char * argv[]) {
 //        test_data();
 //        test_write_file();
 //        test_read_file();
-        test_car5();
+//        test_car5();
+        
+//        test_oper4();
+        test_oper2();
     }
     
     return 0;
