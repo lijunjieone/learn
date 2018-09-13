@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(SampleApp());
-
 }
 
 class SampleApp extends StatelessWidget {
@@ -27,16 +26,20 @@ class SampleAppPage extends StatefulWidget {
 }
 
 class _SampleAppPageState extends State<SampleAppPage> {
-  // Default placeholder text
-  String textToShow = "I Like Flutter11";
-
+  // Default value for toggle
   bool toggle = true;
-  void _updateText() {
+  void _toggle() {
     setState(() {
-      // update the text
       toggle = !toggle;
-      textToShow = "Flutter is Awesome12!";
     });
+  }
+
+  _getToggleChild() {
+    if (toggle) {
+      return Text('Toggle One');
+    } else {
+      return MaterialButton(onPressed: () {}, child: Text('Toggle Two'));
+    }
   }
 
   @override
@@ -45,14 +48,14 @@ class _SampleAppPageState extends State<SampleAppPage> {
       appBar: AppBar(
         title: Text("Sample App"),
       ),
-      body: Center(child: Text(textToShow)),
+      body: Center(
+        child: _getToggleChild(),
+      ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _updateText,
+        onPressed: _toggle,
         tooltip: 'Update Text',
         child: Icon(Icons.update),
       ),
     );
   }
 }
-
-
