@@ -35,9 +35,12 @@ void test_partition() {
 
     for_each(v.begin(),v.end(),output);
     cout << endl;
+}
 
-
-
+void test_reverse() {
+    vector<int> v = get_default_vector();
+    reverse(v.begin(),v.end());
+    for_each(v.begin(),v.end(),output);
 }
 
 
@@ -89,6 +92,54 @@ void test_list() {
 
 }
 
+class CBase {
+    public :
+    virtual char *get_name()=0;
+};
+
+class CBint:public CBase {
+    public:
+    char * get_name() {
+        return "CBint";
+    }
+
+    int get_int() {
+        return 1;
+    }
+};
+
+class CBString :public CBase {
+    public :
+    char * get_name() {
+        return "CBString";
+    }
+
+    char * get_string() {
+        return "hello";
+    }
+};
+
+void test_class1(){
+    CBase *B1 = (CBase *)new CBint();
+    printf(B1->get_name());
+    cout << endl;
+
+    CBint *b2 = static_cast<CBint *>(B1);
+    if(b2) {
+        printf("%d",b2->get_int());
+    cout << endl;
+    }
+
+    CBase *c1 = (CBase *) new CBString();
+    printf(c1->get_name());
+    cout << endl;
+
+    CBString *c2 = static_cast<CBString *>(c1);
+    if(c2) {
+        printf(c2->get_string());
+    cout << endl;
+    }
+}
 int main() {
     // test_list();
 
@@ -96,7 +147,12 @@ int main() {
 
     // test_for_each();
 
-    test_partition();
+    // test_partition();
+
+    // test_reverse();
+
+    test_class1();
+
 
     return 0;
 }
