@@ -140,7 +140,79 @@ void test_class1(){
     cout << endl;
     }
 }
+
+class CB {
+    public :
+    int get_int() {
+        return 1;
+    }
+};
+
+class CI : public CB {
+
+};
+void test_typeid(){
+    CB *p = new CI();
+    CB &t = *p;
+    if(typeid(p) == typeid(CB *)){
+        cout <<"typeid p is CB point" << endl;
+    }
+    if(typeid(p) != typeid(CI *)) {
+        cout << "typeid p is not CI point" << endl;
+    }
+    if(typeid(t) == typeid(CB)) {
+        cout << "typeid t is CB" << endl;
+    }
+    if(typeid(*p) == typeid(CB)){
+        cout <<"point p is CB" << endl;
+    }
+    if(typeid(*p) != typeid(CI)){
+        cout << "point p is not CI" << endl;
+    }
+    if(typeid(&t) == typeid(CB *)){
+        cout << "address t is CB point" << endl;
+    }
+    if(typeid(&t) != typeid(CI *)){
+        cout << "address t is CI point" << endl;
+    }
+
+}
+
+
+class CB1 {
+    virtual void dowork() {
+
+    };
+};
+
+class CD1:virtual public CB1 {
+
+};
+class CD2:virtual public CB1 {
+
+};
+
+class CD3:public CD1,public CD2 {
+    public:
+    char * print(){
+        return "hello";
+    }
+};
+
+void test_dynamic_cast(){
+    CB1 *p = new CD3();
+    cout << typeid(*p).name() << endl;
+    CD3 *pd3 = dynamic_cast<CD3 *>(p);
+    if(pd3){
+        cout << pd3->print() << endl;
+    }
+
+}
+
 int main() {
+
+    test_dynamic_cast();
+    
     // test_list();
 
     // test_map();
@@ -151,7 +223,9 @@ int main() {
 
     // test_reverse();
 
-    test_class1();
+    // test_class1();
+
+    // test_typeid();
 
 
     return 0;
