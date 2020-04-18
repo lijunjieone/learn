@@ -3,8 +3,59 @@
 #include <vector>
 #include <string>
 #include <map>
+#include <algorithm>
 
 using namespace std;
+
+
+void output(int val) {
+    cout << val << " ";
+}
+
+vector<int> get_default_vector() {
+    vector<int> v;
+    for(int i=0;i<20;i++) {
+        v.push_back(i);
+    }
+
+    return v;
+}
+
+bool right5(int val) {
+    return val > 5; 
+}
+
+void test_partition() {
+    vector<int> v = get_default_vector();
+    cout << "Vect:";
+    for_each(v.begin(),v.end(),output);
+    partition(v.begin(),v.end(),right5);
+    cout<< endl;
+    cout << "Vect:";
+
+    for_each(v.begin(),v.end(),output);
+    cout << endl;
+
+
+
+}
+
+
+
+void test_for_each() {
+    vector<int> intVect;
+    for(int i=0;i<10;i++) {
+        intVect.push_back(i);
+    }
+    cout << "Vect:";
+
+    for_each(intVect.begin(),intVect.end(),output);
+    random_shuffle(intVect.begin(),intVect.end());
+    cout << endl;
+    cout << "Vect:";
+    for_each(intVect.begin(),intVect.end(),output);
+
+}
 
 void test_map(){
     map<int,string> cMap;
@@ -41,7 +92,11 @@ void test_list() {
 int main() {
     // test_list();
 
-    test_map();
+    // test_map();
+
+    // test_for_each();
+
+    test_partition();
 
     return 0;
 }
