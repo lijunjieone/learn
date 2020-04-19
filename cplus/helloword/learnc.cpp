@@ -4,6 +4,9 @@
 #include <string>
 #include <map>
 #include <algorithm>
+#include <fstream>
+
+
 
 using namespace std;
 
@@ -209,10 +212,51 @@ void test_dynamic_cast(){
 
 }
 
+void test_stream(){
+
+ofstream ofile;
+cout << "Create File:" <<endl;
+ofile.open("test.txt");
+
+if(!ofile.fail()) {
+    ofile <<"name: " << "lijunjie" << endl;
+    ofile <<"sex:" <<"1" << endl;
+    ofile <<"age:" <<"18" << endl;
+
+    ofile.close();
+
+    cout <<"Create file2:" <<endl;
+    ofile.open("test.txt",ios::app);
+
+    if(!ofile.fail()) {
+        ofile << "name:" <<"linian" << endl ;
+        ofile << "sex:" << "1" << endl;
+        ofile << "age:" << "1" << endl;
+        ofile.close();
+    } 
+
+    ifstream ifile("test.txt");
+    while(!ifile.eof()) {
+        char ch;
+        ifile.get(ch);
+        if(!ifile.eof()){
+            cout << ch;
+        }
+    }
+    cout <<endl;
+
+    ifile.close();
+}
+
+
+}
+
 int main() {
 
-    test_dynamic_cast();
-    
+    test_stream();
+
+    // test_dynamic_cast();
+
     // test_list();
 
     // test_map();
